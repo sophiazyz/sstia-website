@@ -1,122 +1,143 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="website">
+      <header className="navbar">
+        <div className="logo">SSTIA</div>
 
-      <div className="ticks"></div>
+        <nav className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#activities">Activities</a>
+          <a href="#members">Members</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      <main>
+        <section id="home" className="hero">
+          <div className="hero-content">
+            <p className="hero-small-title">
+              Student Science Technology Innovation Association
+            </p>
+
+            <h1>
+              Technology.
+              <br />
+              Innovation.
+              <br />
+              Collaboration.
+            </h1>
+
+            <p className="hero-description">
+              Connecting students through technology, innovation and
+              collaboration.
+            </p>
+
+            <a href="#about" className="hero-button">
+              Explore SSTIA
+            </a>
+          </div>
+        </section>
+
+      <section id="about" className="about-section">
+        <div className="about-container">
+          <div className="about-title">
+            <p className="section-label">WHO WE ARE</p>
+            <h2>About SSTIA</h2>
+          </div>
+
+          <div className="about-content">
+            <p className="about-lead">
+              SSTIA, Student Science Technology Innovation Association, is a student organization under SJTU Global College.
+            </p>
+
+            <p>
+              We provide a platform for students to explore new technologies,
+              develop practical skills, exchange ideas and work together on
+              meaningful projects.
+            </p>
+
+            <p>
+              Through workshops, technical events and competitions, we aim to foster a culture of innovation and creativity among students.
+              SSTIA aims to create an active and open community where students
+              can turn ideas into real-world solutions.
+            </p>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <section id="activities" className="activities-section">
+        <div className="activities-container">
+          <div className="activities-header">
+            <div>
+              <p className="section-label">WHAT WE DO</p>
+              <h2>Activities</h2>
+            </div>
+
+            <p className="activities-intro">
+              Explore our workshops, technical events and projects
+              designed to help students learn, create and connect.
+            </p>
+          </div>
+
+          <div className="activities-grid">
+            <article className="activity-card">
+              <div className="activity-number">01</div>
+
+              <div>
+                <h3>Workshops</h3>
+                <p>
+                  Hands-on workshops where students can learn new
+                  technologies and develop practical skills.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+              </div>
+            </article>
+
+            <article className="activity-card">
+              <div className="activity-number">02</div>
+
+              <div>
+                <h3>Innovation Events</h3>
+                <p>
+                  Talks, competitions and events that bring students
+                  together to exchange ideas and explore innovation.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+              </div>
+            </article>
+
+            <article className="activity-card">
+              <div className="activity-number">03</div>
+
+              <div>
+                <h3>GC Science</h3>
+                <p>
+                  A student-led publication that showcases the latest
+                  research, projects and achievements in science and technology.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+        <section id="members" className="placeholder-section">
+          <h2>Members</h2>
+        </section>
+
+        <section id="contact" className="placeholder-section">
+          <h2>Contact</h2>
+        </section>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
