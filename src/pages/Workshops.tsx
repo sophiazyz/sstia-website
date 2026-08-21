@@ -1,50 +1,102 @@
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import "../App.css";
+
 function Workshops() {
   return (
-    <main className="subpage">
-      <div className="subpage-container">
-        <p className="section-label">ACTIVITIES</p>
+    <div className="website">
+      <Navbar />
 
-        <h1>Workshops</h1>
+      <main className="subpage">
+        <div className="subpage-container">
 
-        <p className="subpage-intro">
-          Explore workshops organized by SSTIA, including
-          technical sessions, hands-on activities and
-          student-led learning experiences.
-        </p>
+          <p className="section-label">
+            ACTIVITIES
+          </p>
 
-        <div className="archive-grid">
-          <article className="archive-card">
-            <span>2026</span>
-            <h2>2026 Workshops</h2>
-            <p>
-              Workshops and technical activities organized
-              during 2026.
-            </p>
-            <a href="#">View Workshops →</a>
-          </article>
+          <h1>
+            Workshops
+          </h1>
 
-          <article className="archive-card">
-            <span>2025</span>
-            <h2>2025 Workshops</h2>
-            <p>
-              Explore workshops and technical sessions
-              from 2025.
-            </p>
-            <a href="#">View Workshops →</a>
-          </article>
+          <p className="subpage-intro">
+            Explore workshops organized by SSTIA, including
+            technical sessions, hands-on activities and
+            student-led learning experiences.
+          </p>
 
-          <article className="archive-card">
-            <span>2024</span>
-            <h2>2024 Workshops</h2>
-            <p>
-              Explore workshops and technical sessions
-              from 2024.
-            </p>
-            <a href="#">View Workshops →</a>
-          </article>
+          <div className="archive-grid">
+
+            {/* 2026 */}
+
+            <article className="archive-card">
+              <span>2026</span>
+
+              <h2>
+                2026 Workshops
+              </h2>
+
+              <ul className="workshop-list">
+                <li>
+                  <Link to="/activities/workshops/2026/web-development">
+                    Web Development
+                  </Link>
+                </li>
+              </ul>
+            </article>
+
+            {/* 2025 */}
+
+            <article className="archive-card">
+              <span>2025</span>
+
+              <h2>
+                2025 Workshops
+              </h2>
+
+              <ul className="workshop-list">
+                <li>
+                  <Link to="/activities/workshops/2025/python">
+                    Python
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/activities/workshops/2025/deep-learning">
+                    Deep Learning
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/activities/workshops/2025/latex">
+                    LaTeX
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/activities/workshops/2025/solidworks">
+                    SolidWorks
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/activities/workshops/2025/upc">
+                    UPC
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/activities/workshops/2025/liming-cup-sample-car">
+                    Liming Cup Sample Car
+                  </Link>
+                </li>
+              </ul>
+            </article>
+
+          </div>
+
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
 

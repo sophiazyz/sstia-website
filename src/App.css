@@ -320,6 +320,159 @@ body {
   text-decoration: none;
 }
 
+
+/* ============================= */
+/* Workshops Page */
+/* ============================= */
+
+.subpage {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.subpage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subpage > .subpage-container {
+  padding: 140px 60px;
+}
+
+.subpage h1 {
+  margin: 0;
+
+  font-size: clamp(56px, 8vw, 100px);
+  line-height: 1;
+  letter-spacing: -4px;
+
+  color: #111;
+}
+
+.subpage-intro {
+  max-width: 650px;
+
+  margin-top: 35px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #555;
+}
+
+
+/* Workshop archive */
+
+.archive-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+
+  margin-top: 80px;
+}
+
+.archive-card {
+  min-height: 360px;
+
+  padding: 40px;
+
+  background: white;
+
+  border: 1px solid #ddd;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.archive-card:hover {
+  transform: translateY(-8px);
+
+  background: #111;
+
+  color: white;
+}
+
+
+/* Year */
+
+.archive-card > span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+.archive-card:hover > span {
+  color: #aaa;
+}
+
+
+/* Title */
+
+.archive-card h2 {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 1.2;
+
+  color: #111;
+}
+
+.archive-card:hover h2 {
+  color: white;
+}
+
+
+/* Workshop list */
+
+.workshop-list {
+  margin: 35px 0 0;
+
+  padding-left: 22px;
+}
+
+.workshop-list li {
+  margin-bottom: 15px;
+
+  padding-left: 4px;
+
+  color: #111;
+}
+
+.workshop-list a {
+  color: #111;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.workshop-list a:hover {
+  text-decoration: underline;
+}
+
+.archive-card:hover .workshop-list li {
+  color: white;
+}
+
+.archive-card:hover .workshop-list a {
+  color: white;
+}
+
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0 24px;
@@ -367,6 +520,38 @@ body {
   .activity-card {
     min-height: 300px;
     padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .subpage > .subpage-container {
+    padding: 110px 24px;
+  }
+
+  .subpage h1 {
+    font-size: 64px;
+    letter-spacing: -3px;
+  }
+
+  .subpage-intro {
+    font-size: 17px;
+  }
+
+  .archive-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 60px;
+  }
+
+  .archive-card {
+    min-height: 320px;
+
+    padding: 30px;
+  }
+
+  .archive-card h2 {
+    font-size: 28px;
   }
 }
 
