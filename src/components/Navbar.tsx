@@ -1,34 +1,55 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+
+  const isHome = location.pathname === "/";
+
   return (
-    <header className="navbar">
+    <nav className="navbar">
+
       <div className="logo">
         SSTIA
       </div>
 
-      <nav className="nav-links">
-        <Link to="/">
-          Home
+      <div className="nav-links">
+
+        {/* Home */}
+        {isHome ? (
+          <a href="#home">Home</a>
+        ) : (
+          <Link to="/#home">Home</Link>
+        )}
+
+        {/* About */}
+        {isHome ? (
+          <a href="#about">About</a>
+        ) : (
+          <Link to="/#about">About</Link>
+        )}
+
+        {/* Activities */}
+        {isHome ? (
+          <a href="#activities">Activities</a>
+        ) : (
+          <Link to="/#activities">Activities</Link>
+        )}
+
+        {/* Workshops */}
+        <Link to="/activities/workshops">
+          Workshops
         </Link>
 
-        <Link to="/#about">
-          About
-        </Link>
+        {/* Members */}
+        {isHome ? (
+          <a href="#members">Members</a>
+        ) : (
+          <Link to="/#members">Members</Link>
+        )}
 
-        <Link to="/#activities">
-          Activities
-        </Link>
+      </div>
 
-        <Link to="/#members">
-          Members
-        </Link>
-
-        <Link to="/#contact">
-          Contact
-        </Link>
-      </nav>
-    </header>
+    </nav>
   );
 }
 
