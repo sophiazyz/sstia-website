@@ -63,27 +63,19 @@ body {
 /* Hero */
 
 .hero {
-  min-height: 100vh;
+  height: 600px;
 
-  display: flex;
-  align-items: center;
-
-  padding: 120px 60px;
-
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.2)
-    ),
-    url("./assets/hero.png");
-
+  background-image: url("./assets/hero.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
-  max-width: 800px;
+  position: relative;
+  z-index: 2;
+
+  padding-left: 10%;
   color: white;
 }
 
@@ -472,6 +464,330 @@ body {
   color: white;
 }
 
+/* =========================================================
+   ORGANIZATION SECTION
+   ========================================================= */
+
+.organization-section {
+  padding: 140px 60px;
+  background: #080d18;
+  color: white;
+}
+
+.organization-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   ORGANIZATION HEADER
+   ========================================================= */
+
+.organization-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: end;
+  margin-bottom: 90px;
+}
+
+.organization-label {
+  color: #7d8da8;
+}
+
+.organization-header h2 {
+  margin: 0;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.organization-intro {
+  max-width: 500px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #9ca9bd;
+}
+
+
+/* =========================================================
+   MAIN ORGANIZATION
+   ========================================================= */
+
+.organization-structure {
+  position: relative;
+}
+
+.organization-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.organization-card {
+  min-height: 190px;
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(150, 180, 220, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.organization-card:hover {
+  transform: translateY(-6px);
+  background: rgba(70, 130, 200, 0.1);
+  border-color: rgba(120, 180, 255, 0.5);
+}
+
+.organization-card-main {
+  background: rgba(70, 130, 200, 0.08);
+  border-color: rgba(120, 180, 255, 0.35);
+}
+
+.organization-number {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #6f83a0;
+}
+
+.organization-card h3 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.organization-card p {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #71839d;
+}
+
+
+/* =========================================================
+   DEPARTMENT STRUCTURE
+   ========================================================= */
+
+.department-structure {
+  position: relative;
+  margin-top: 10px;
+  padding-top: 90px;
+}
+
+
+/* =========================================================
+   VERTICAL LINE
+   Department Heads
+          |
+          |
+          ●
+   ========================================================= */
+
+.department-main-line {
+  position: absolute;
+
+  width: 1px;
+  height: 90px;
+
+  background: #45698f;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HORIZONTAL LINE
+        ─────●─────
+        |    |    |
+   ========================================================= */
+
+.department-horizontal-line {
+  position: absolute;
+
+  height: 1px;
+
+  background: #45698f;
+
+  /*
+    Three cards occupy equal width.
+
+    The horizontal line starts
+    at the center of the first card
+    and ends at the center of the third card.
+  */
+
+  left: calc(15.8%);
+  right: calc(15.8%);
+
+  top: 89px;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   DEPARTMENT GRID
+   ========================================================= */
+
+.department-grid {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  margin-top: 90px;
+}
+
+
+/* =========================================================
+   DEPARTMENT CARD
+   ========================================================= */
+
+.department-card {
+  position: relative;
+
+  min-height: 320px;
+  padding: 42px 40px;
+
+  background: #101620;
+
+  border: 1px solid #273548;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.department-card:hover {
+  border-color: #45698f;
+  background: #111b28;
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   VERTICAL LINE ABOVE EACH DEPARTMENT
+   ========================================================= */
+
+.department-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 1px;
+  height: 90px;
+
+  background: #45698f;
+
+  left: 50%;
+  top: -90px;
+
+  transform: translateX(-50%);
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   DEPARTMENT NUMBER
+   ========================================================= */
+
+.department-number {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: #6689b2;
+
+  margin-bottom: 68px;
+}
+
+
+/* =========================================================
+   DEPARTMENT TITLE
+   ========================================================= */
+
+.department-card h3 {
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 1.15;
+
+  font-weight: 600;
+  letter-spacing: -1px;
+
+  color: #f4f5f7;
+}
+
+
+/* =========================================================
+   CHINESE SUBTITLE
+   ========================================================= */
+
+.department-card p {
+  margin: 12px 0 0;
+
+  font-size: 14px;
+  letter-spacing: 2px;
+
+  color: #6689b2;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.department-line {
+  width: 100%;
+
+  margin-top: 38px;
+  padding-top: 28px;
+
+  border-top: 1px solid #45698f;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.department-description {
+  display: block;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #91a5bf;
+}
+
+
+
+
 
 @media (max-width: 768px) {
   .navbar {
@@ -521,9 +837,74 @@ body {
     min-height: 300px;
     padding: 30px;
   }
-}
 
-@media (max-width: 768px) {
+    /* Organization */
+
+.organization-section {
+    padding: 100px 24px;
+  }
+
+  .organization-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .organization-header h2 {
+    font-size: 56px;
+  }
+
+  .organization-main {
+    grid-template-columns: 1fr;
+  }
+
+  .organization-card {
+    min-height: 160px;
+  }
+
+
+  /* -----------------------------------------
+     Department mobile layout
+     ----------------------------------------- */
+
+  .department-structure {
+    margin-top: 60px;
+    padding-top: 0;
+  }
+
+  .department-main-line,
+  .department-horizontal-line {
+    display: none;
+  }
+
+  .department-grid {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    margin-top: 0;
+  }
+
+  .department-card {
+    min-height: 260px;
+    padding: 32px;
+  }
+
+  .department-card::before {
+    display: none;
+  }
+
+  .department-number {
+    margin-bottom: 50px;
+  }
+
+  .department-card h3 {
+    font-size: 30px;
+  }
+
+  .department-description {
+    font-size: 15px;
+  }
 
   .subpage > .subpage-container {
     padding: 110px 24px;
@@ -553,5 +934,29 @@ body {
   .archive-card h2 {
     font-size: 28px;
   }
+
+    .department-structure {
+    margin-top: 50px;
+    padding-top: 50px;
+  }
+
+  .department-main-line {
+    height: 50px;
+  }
+
+  .department-horizontal-line {
+    display: none;
+  }
+
+  .department-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .department-card::before {
+    top: -50px;
+    height: 50px;
+  }
 }
+
 

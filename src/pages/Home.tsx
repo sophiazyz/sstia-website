@@ -6,18 +6,11 @@ function Home() {
   return (
     <div className="website">
       <Navbar />
-        <div className="logo">SSTIA</div>
-
-        <nav className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#activities">Activities</a>
-          <a href="#members">Members</a>
-          <a href="#contact">Contact</a>
-        </nav>
 
       <main>
+        {/* ============================= */}
         {/* Hero */}
+        {/* ============================= */}
 
         <section id="home" className="hero">
           <div className="hero-content">
@@ -44,7 +37,9 @@ function Home() {
           </div>
         </section>
 
+        {/* ============================= */}
         {/* About */}
+        {/* ============================= */}
 
         <section id="about" className="about-section">
           <div className="about-container">
@@ -76,7 +71,9 @@ function Home() {
           </div>
         </section>
 
+        {/* ============================= */}
         {/* Activities */}
+        {/* ============================= */}
 
         <section id="activities" className="activities-section">
           <div className="activities-container">
@@ -156,16 +153,147 @@ function Home() {
           </div>
         </section>
 
-        {/* Members */}
+        {/* ============================= */}
+        {/* Organization */}
+        {/* ============================= */}
 
-        <section id="members" className="placeholder-section">
-          <h2>Members</h2>
-        </section>
+        <section id="members" className="organization-section">
+          <div className="organization-container">
 
-        {/* Contact */}
+            {/* Section Header */}
 
-        <section id="contact" className="placeholder-section">
-          <h2>Contact</h2>
+            <div className="organization-header">
+              <div>
+                <p className="section-label organization-label">
+                  OUR ORGANIZATION
+                </p>
+
+                <h2>Organization</h2>
+              </div>
+
+              <p className="organization-intro">
+                A collaborative structure built around technology,
+                innovation and student development.
+              </p>
+            </div>
+
+            {/* Main Organization Structure */}
+
+            <div className="organization-structure">
+
+              {/* Top Level Organization */}
+
+              <div className="organization-main">
+
+                {/* Presidium */}
+
+                <div className="organization-card">
+                  <span className="organization-number">01</span>
+
+                  <div>
+                    <h3>Presidium</h3>
+                    <p>主席团</p>
+                  </div>
+                </div>
+
+                {/* Department Heads */}
+
+                <div className="organization-card organization-card-main">
+                  <span className="organization-number">02</span>
+
+                  <div>
+                    <h3>Department Heads</h3>
+                    <p>部长团</p>
+                  </div>
+                </div>
+
+                {/* Advisors */}
+
+                <div className="organization-card">
+                  <span className="organization-number">03</span>
+
+                  <div>
+                    <h3>Advisory Board</h3>
+                    <p>顾问团</p>
+                  </div>
+                </div>
+
+              </div>
+
+
+              {/* Department Structure */}
+
+              <div className="department-structure">
+
+                {/* Vertical connection from Department Heads */}
+
+                <div className="department-main-line"></div>
+
+                {/* Horizontal connection to three departments */}
+
+                <div className="department-horizontal-line"></div>
+
+                <div className="department-grid">
+
+                  {/* Competition */}
+
+                  <div className="department-card">
+                    <span className="department-number">01</span>
+
+                    <div>
+                      <h3>Competition</h3>
+                      <p>竞赛部</p>
+                    </div>
+
+                    <div className="department-line"></div>
+
+                    <span className="department-description">
+                      Workshops &amp; Mechanical Competition Prototypes
+                    </span>
+                  </div>
+
+
+                  {/* Projects */}
+
+                  <div className="department-card">
+                    <span className="department-number">02</span>
+
+                    <div>
+                      <h3>Projects</h3>
+                      <p>项目部</p>
+                    </div>
+
+                    <div className="department-line"></div>
+
+                    <span className="department-description">
+                      GC Science &amp; Mentor Meetups
+                    </span>
+                  </div>
+
+
+                  {/* Publicity */}
+
+                  <div className="department-card">
+                    <span className="department-number">03</span>
+
+                    <div>
+                      <h3>Publicity</h3>
+                      <p>宣传部</p>
+                    </div>
+
+                    <div className="department-line"></div>
+
+                    <span className="department-description">
+                      Social Media &amp; SSTIA Merchandise Design
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+              
+          </div>
         </section>
       </main>
     </div>
