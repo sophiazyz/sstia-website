@@ -42,9 +42,9 @@ function Navbar() {
 
         {/* Members */}
         {isHome ? (
-          <a href="#members">Members</a>
+          <a href="#members">Our Organization</a>
         ) : (
-          <Link to="/#members">Members</Link>
+          <Link to="/#members">Our Organization</Link>
         )}
 
       </div>
