@@ -1,0 +1,364 @@
+/* =========================================
+   Python Workshop
+   ========================================= */
+
+.workshop-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+}
+
+
+/* =========================================
+   Container
+   ========================================= */
+
+.workshop-container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   Section Label
+   ========================================= */
+
+.section-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: #777777;
+}
+
+
+/* =========================================
+   Workshop Hero
+   ========================================= */
+
+.workshop-hero {
+  padding: 110px 0 100px;
+  background: #f4f4f0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.workshop-hero .section-label {
+  margin-bottom: 24px;
+}
+
+.workshop-hero h1 {
+  margin: 0 0 28px;
+  font-size: clamp(56px, 8vw, 100px);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -4px;
+}
+
+.workshop-intro {
+  max-width: 720px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #555555;
+}
+
+
+/* =========================================
+   Main Content
+   ========================================= */
+
+.workshop-content {
+  padding: 100px 0;
+}
+
+
+/* =========================================
+   Workshop Information
+   ========================================= */
+
+.workshop-info-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.workshop-info-grid h2 {
+  margin: 25px 0 0;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.workshop-description {
+  padding-top: 35px;
+}
+
+.workshop-description p {
+  margin: 0 0 24px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555555;
+}
+
+.workshop-description p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   Workshop Topics
+   ========================================= */
+
+.workshop-topics {
+  padding: 100px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.workshop-topics > .section-label {
+  margin-bottom: 40px;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #dddddd;
+  border: 1px solid #dddddd;
+}
+
+.topic-card {
+  min-height: 300px;
+  padding: 35px;
+  background: #ffffff;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.topic-card:hover {
+  background: #f7f7f4;
+}
+
+.topic-card > span {
+  display: block;
+  margin-bottom: 55px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #999999;
+  letter-spacing: 1px;
+}
+
+.topic-card h3 {
+  margin: 0 0 18px;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.topic-card p {
+  max-width: 420px;
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #666666;
+}
+
+.topic-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   Workshop Resources
+   ========================================= */
+
+.workshop-materials {
+  padding: 100px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.workshop-materials > .section-label {
+  margin-bottom: 35px;
+}
+
+.materials-list {
+  border-top: 1px solid #dddddd;
+}
+
+.material-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 5px;
+
+  border-bottom: 1px solid #dddddd;
+
+  color: #111111;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  transition:
+    padding 0.25s ease,
+    color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.material-link span:last-child {
+  font-size: 22px;
+  transition: transform 0.25s ease;
+}
+
+.material-link:hover {
+  padding-left: 14px;
+  color: #555555;
+  background-color: #fafafa;
+}
+
+.material-link:hover span:last-child {
+  transform: translateX(6px);
+}
+
+
+/* =========================================
+   Back to Workshops
+   ========================================= */
+
+.workshop-back {
+  padding: 60px 0 20px;
+}
+
+.workshop-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #111111;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease;
+}
+
+.workshop-back a:hover {
+  gap: 14px;
+  color: #666666;
+}
+
+
+/* =========================================
+   Tablet
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .workshop-hero {
+    padding: 80px 0;
+  }
+
+  .workshop-content {
+    padding: 70px 0;
+  }
+
+  .workshop-info-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 80px;
+  }
+
+  .workshop-description {
+    padding-top: 0;
+  }
+
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .workshop-container {
+    width: 88%;
+  }
+
+  .workshop-hero {
+    padding: 65px 0;
+  }
+
+  .workshop-hero h1 {
+    font-size: 58px;
+    letter-spacing: -2px;
+  }
+
+  .workshop-intro {
+    font-size: 16px;
+  }
+
+  .workshop-content {
+    padding: 55px 0;
+  }
+
+  .workshop-info-grid {
+    padding-bottom: 60px;
+  }
+
+  .workshop-info-grid h2 {
+    font-size: 42px;
+  }
+
+  .workshop-description p {
+    font-size: 15px;
+  }
+
+  .workshop-topics {
+    padding: 65px 0;
+  }
+
+  .topic-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .topic-card > span {
+    margin-bottom: 35px;
+  }
+
+  .topic-card h3 {
+    font-size: 22px;
+  }
+
+  .topic-card p {
+    font-size: 14px;
+  }
+
+  .workshop-materials {
+    padding: 65px 0;
+  }
+
+  .material-link {
+    padding: 20px 4px;
+    font-size: 15px;
+  }
+
+  .material-link span:last-child {
+    font-size: 19px;
+  }
+
+  .workshop-back {
+    padding-top: 45px;
+  }
+}

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import "../App.css";
 
 function Home() {
   return (
     <div className="website">
-      <header className="navbar">
+      <Navbar />
         <div className="logo">SSTIA</div>
 
         <nav className="nav-links">
@@ -14,7 +15,6 @@ function Home() {
           <a href="#members">Members</a>
           <a href="#contact">Contact</a>
         </nav>
-      </header>
 
       <main>
         {/* Hero */}
