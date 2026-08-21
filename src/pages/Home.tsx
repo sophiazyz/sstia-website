@@ -50,22 +50,21 @@ function Home() {
 
             <div className="about-content">
               <p className="about-lead">
-                SSTIA, Student Science Technology Innovation Association,
-                is a student organization under SJTU Global College.
+                SSTIA, Student Science Technology Innovation Association, is a
+                student organization under SJTU Global College.
               </p>
 
               <p>
-                We provide a platform for students to explore new
-                technologies, develop practical skills, exchange ideas
-                and work together on meaningful projects.
+                We provide a platform for students to explore new technologies,
+                develop practical skills, exchange ideas and work together on
+                meaningful projects.
               </p>
 
               <p>
-                Through workshops, technical events and competitions,
-                we aim to foster a culture of innovation and creativity
-                among students. SSTIA aims to create an active and open
-                community where students can turn ideas into real-world
-                solutions.
+                Through workshops, technical events and competitions, we aim to
+                foster a culture of innovation and creativity among students.
+                SSTIA aims to create an active and open community where students
+                can turn ideas into real-world solutions.
               </p>
             </div>
           </div>
@@ -84,13 +83,12 @@ function Home() {
               </div>
 
               <p className="activities-intro">
-                Explore our workshops, technical events and projects
-                designed to help students learn, create and connect.
+                Explore our workshops, technical events and projects designed to
+                help students learn, create and connect.
               </p>
             </div>
 
             <div className="activities-grid">
-
               {/* Workshops */}
 
               <article className="activity-card">
@@ -100,13 +98,11 @@ function Home() {
                   <h3>Workshops</h3>
 
                   <p>
-                    Hands-on workshops where students can learn new
-                    technologies and develop practical skills.
+                    Hands-on workshops where students can learn new technologies
+                    and develop practical skills.
                   </p>
 
-                  <Link to="/activities/workshops">
-                    Learn More →
-                  </Link>
+                  <Link to="/activities/workshops">Learn More →</Link>
                 </div>
               </article>
 
@@ -119,13 +115,11 @@ function Home() {
                   <h3>Innovation Events</h3>
 
                   <p>
-                    Talks, competitions and events that bring students
-                    together to exchange ideas and explore innovation.
+                    Talks, competitions and events that bring students together
+                    to exchange ideas and explore innovation.
                   </p>
 
-                  <Link to="/activities/events">
-                    Learn More →
-                  </Link>
+                  <Link to="/activities/events">Learn More →</Link>
                 </div>
               </article>
 
@@ -143,12 +137,9 @@ function Home() {
                     technology.
                   </p>
 
-                  <Link to="/activities/gc-science">
-                    Learn More →
-                  </Link>
+                  <Link to="/activities/gc-science">Learn More →</Link>
                 </div>
               </article>
-
             </div>
           </div>
         </section>
@@ -159,7 +150,6 @@ function Home() {
 
         <section id="members" className="organization-section">
           <div className="organization-container">
-
             {/* Section Header */}
 
             <div className="organization-header">
@@ -172,19 +162,17 @@ function Home() {
               </div>
 
               <p className="organization-intro">
-                A collaborative structure built around technology,
-                innovation and student development.
+                A collaborative structure built around technology, innovation
+                and student development.
               </p>
             </div>
 
             {/* Main Organization Structure */}
 
             <div className="organization-structure">
-
               {/* Top Level Organization */}
 
               <div className="organization-main">
-
                 {/* Presidium */}
 
                 <div className="organization-card">
@@ -217,14 +205,11 @@ function Home() {
                     <p>顾问团</p>
                   </div>
                 </div>
-
               </div>
-
 
               {/* Department Structure */}
 
               <div className="department-structure">
-
                 {/* Vertical connection from Department Heads */}
 
                 <div className="department-main-line"></div>
@@ -234,7 +219,6 @@ function Home() {
                 <div className="department-horizontal-line"></div>
 
                 <div className="department-grid">
-
                   {/* Competition */}
 
                   <div className="department-card">
@@ -251,7 +235,6 @@ function Home() {
                       Workshops &amp; Mechanical Competition Prototypes
                     </span>
                   </div>
-
 
                   {/* Projects */}
 
@@ -270,7 +253,6 @@ function Home() {
                     </span>
                   </div>
 
-
                   {/* Publicity */}
 
                   <div className="department-card">
@@ -287,12 +269,9 @@ function Home() {
                       Social Media &amp; SSTIA Merchandise Design
                     </span>
                   </div>
-
                 </div>
               </div>
-
             </div>
-              
           </div>
         </section>
       </main>
