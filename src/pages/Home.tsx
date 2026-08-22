@@ -234,6 +234,8 @@ function Home() {
                     <span className="department-description">
                       Workshops &amp; Mechanical Competition Prototypes
                     </span>
+
+                    <Link to="/departments/competition">Learn More →</Link>
                   </div>
 
                   {/* Projects */}
@@ -251,6 +253,8 @@ function Home() {
                     <span className="department-description">
                       GC Science &amp; Mentor Meetups
                     </span>
+
+                    <Link to="/departments/projects">Learn More →</Link>
                   </div>
 
                   {/* Publicity */}
@@ -268,6 +272,8 @@ function Home() {
                     <span className="department-description">
                       Social Media &amp; SSTIA Merchandise Design
                     </span>
+
+                    <Link to="/departments/publicity">Learn More →</Link>
                   </div>
                 </div>
               </div>

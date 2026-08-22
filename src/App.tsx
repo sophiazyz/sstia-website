@@ -7,6 +7,9 @@ import DeepLearning from "./pages/workshops/2025/DeepLearning";
 import Events from "./pages/Events";
 import GCScience from "./pages/GCScience";
 import GCSciencePost from "./pages/gcscience/GCSciencePost";
+import Competition from "./pages/departments/Competition";
+import Projects from "./pages/departments/Projects";
+import Publicity from "./pages/departments/Publicity";
 
 function App() {
   return (
@@ -23,6 +26,10 @@ function App() {
       <Route path="/activities/gc-science" element={<GCScience />} />
 
       <Route path="/activities/gc-science/:postId" element={<GCSciencePost />} />
+
+      <Route path="/departments/competition" element={<Competition />} />
+      <Route path="/departments/projects" element={<Projects />} />
+      <Route path="/departments/publicity" element={<Publicity />} />
     </Routes>
   );
 }
