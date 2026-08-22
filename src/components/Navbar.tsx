@@ -7,26 +7,14 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-
-      <div className="logo">
-        SSTIA
-      </div>
+      <div className="logo">SSTIA</div>
 
       <div className="nav-links">
-
         {/* Home */}
-        {isHome ? (
-          <a href="#home">Home</a>
-        ) : (
-          <Link to="/#home">Home</Link>
-        )}
+        {isHome ? <a href="#home">Home</a> : <Link to="/#home">Home</Link>}
 
         {/* About */}
-        {isHome ? (
-          <a href="#about">About</a>
-        ) : (
-          <Link to="/#about">About</Link>
-        )}
+        {isHome ? <a href="#about">About</a> : <Link to="/#about">About</Link>}
 
         {/* Activities */}
         {isHome ? (
@@ -36,9 +24,10 @@ function Navbar() {
         )}
 
         {/* Workshops */}
-        <Link to="/activities/workshops">
-          Workshops
-        </Link>
+        <Link to="/activities/workshops">Workshops</Link>
+
+        {/* GC Science */}
+        <Link to="/activities/gc-science">GC Science</Link>
 
         {/* Members */}
         {isHome ? (
@@ -46,9 +35,7 @@ function Navbar() {
         ) : (
           <Link to="/#members">Our Organization</Link>
         )}
-
       </div>
-
     </nav>
   );
 }

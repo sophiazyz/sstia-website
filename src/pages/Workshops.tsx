@@ -9,31 +9,22 @@ function Workshops() {
 
       <main className="subpage">
         <div className="subpage-container">
+          <p className="section-label">ACTIVITIES</p>
 
-          <p className="section-label">
-            ACTIVITIES
-          </p>
-
-          <h1>
-            Workshops
-          </h1>
+          <h1>Workshops</h1>
 
           <p className="subpage-intro">
-            Explore workshops organized by SSTIA, including
-            technical sessions, hands-on activities and
-            student-led learning experiences.
+            Explore workshops organized by SSTIA, including technical sessions,
+            hands-on activities and student-led learning experiences.
           </p>
 
           <div className="archive-grid">
-
             {/* 2026 */}
 
             <article className="archive-card">
               <span>2026</span>
 
-              <h2>
-                2026 Workshops
-              </h2>
+              <h2>2026 Workshops</h2>
 
               <ul className="workshop-list">
                 <li>
@@ -49,15 +40,11 @@ function Workshops() {
             <article className="archive-card">
               <span>2025</span>
 
-              <h2>
-                2025 Workshops
-              </h2>
+              <h2>2025 Workshops</h2>
 
               <ul className="workshop-list">
                 <li>
-                  <Link to="/activities/workshops/2025/python">
-                    Python
-                  </Link>
+                  <Link to="/activities/workshops/2025/python">Python</Link>
                 </li>
 
                 <li>
@@ -67,9 +54,7 @@ function Workshops() {
                 </li>
 
                 <li>
-                  <Link to="/activities/workshops/2025/latex">
-                    LaTeX
-                  </Link>
+                  <Link to="/activities/workshops/2025/latex">LaTeX</Link>
                 </li>
 
                 <li>
@@ -79,9 +64,7 @@ function Workshops() {
                 </li>
 
                 <li>
-                  <Link to="/activities/workshops/2025/upc">
-                    UPC
-                  </Link>
+                  <Link to="/activities/workshops/2025/upc">UPC</Link>
                 </li>
 
                 <li>
@@ -91,9 +74,7 @@ function Workshops() {
                 </li>
               </ul>
             </article>
-
           </div>
-
         </div>
       </main>
     </div>

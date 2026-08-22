@@ -313,7 +313,6 @@ body {
   text-decoration: none;
 }
 
-
 /* ============================= */
 /* Workshops Page */
 /* ============================= */
@@ -353,7 +352,6 @@ body {
   color: #555;
 }
 
-
 /* Workshop archive */
 
 .archive-grid {
@@ -389,7 +387,6 @@ body {
   color: white;
 }
 
-
 /* Year */
 
 .archive-card > span {
@@ -409,7 +406,6 @@ body {
   color: #aaa;
 }
 
-
 /* Title */
 
 .archive-card h2 {
@@ -424,7 +420,6 @@ body {
 .archive-card:hover h2 {
   color: white;
 }
-
 
 /* Workshop list */
 
@@ -480,7 +475,6 @@ body {
   margin: 0 auto;
 }
 
-
 /* =========================================================
    ORGANIZATION HEADER
    ========================================================= */
@@ -511,7 +505,6 @@ body {
   line-height: 1.7;
   color: #9ca9bd;
 }
-
 
 /* =========================================================
    MAIN ORGANIZATION
@@ -576,7 +569,6 @@ body {
   color: #71839d;
 }
 
-
 /* =========================================================
    DEPARTMENT STRUCTURE
    ========================================================= */
@@ -586,7 +578,6 @@ body {
   margin-top: 10px;
   padding-top: 90px;
 }
-
 
 /* =========================================================
    VERTICAL LINE
@@ -611,7 +602,6 @@ body {
 
   z-index: 2;
 }
-
 
 /* =========================================================
    HORIZONTAL LINE
@@ -642,7 +632,6 @@ body {
   z-index: 1;
 }
 
-
 /* =========================================================
    DEPARTMENT GRID
    ========================================================= */
@@ -657,7 +646,6 @@ body {
 
   margin-top: 90px;
 }
-
 
 /* =========================================================
    DEPARTMENT CARD
@@ -687,7 +675,6 @@ body {
   transform: translateY(-4px);
 }
 
-
 /* =========================================================
    VERTICAL LINE ABOVE EACH DEPARTMENT
    ========================================================= */
@@ -710,7 +697,6 @@ body {
   z-index: 2;
 }
 
-
 /* =========================================================
    DEPARTMENT NUMBER
    ========================================================= */
@@ -726,7 +712,6 @@ body {
 
   margin-bottom: 68px;
 }
-
 
 /* =========================================================
    DEPARTMENT TITLE
@@ -744,7 +729,6 @@ body {
   color: #f4f5f7;
 }
 
-
 /* =========================================================
    CHINESE SUBTITLE
    ========================================================= */
@@ -757,7 +741,6 @@ body {
 
   color: #6689b2;
 }
-
 
 /* =========================================================
    DIVIDER
@@ -772,7 +755,6 @@ body {
   border-top: 1px solid #45698f;
 }
 
-
 /* =========================================================
    DESCRIPTION
    ========================================================= */
@@ -785,10 +767,6 @@ body {
 
   color: #91a5bf;
 }
-
-
-
-
 
 @media (max-width: 768px) {
   .navbar {
@@ -820,7 +798,7 @@ body {
     font-size: 56px;
   }
 
-    .activities-section {
+  .activities-section {
     padding: 100px 24px;
   }
 
@@ -839,9 +817,9 @@ body {
     padding: 30px;
   }
 
-    /* Organization */
+  /* Organization */
 
-.organization-section {
+  .organization-section {
     padding: 100px 24px;
   }
 
@@ -862,7 +840,6 @@ body {
   .organization-card {
     min-height: 160px;
   }
-
 
   /* -----------------------------------------
      Department mobile layout
@@ -936,7 +913,7 @@ body {
     font-size: 28px;
   }
 
-    .department-structure {
+  .department-structure {
     margin-top: 50px;
     padding-top: 50px;
   }
@@ -959,5 +936,3 @@ body {
     height: 50px;
   }
 }
-
-

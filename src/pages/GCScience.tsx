@@ -1,50 +1,59 @@
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import "../App.css";
+import "./gcscience/gcscience.css";
+import { formatPostDate, getPosts } from "./gcscience/posts";
+
 function GCScience() {
+  const posts = getPosts();
+
   return (
-    <main className="subpage">
-      <div className="subpage-container">
-        <p className="section-label">PUBLICATION</p>
+    <div className="website">
+      <Navbar />
 
-        <h1>GC Science</h1>
+      <main className="subpage">
+        <div className="subpage-container">
+          <p className="section-label">PUBLICATION</p>
 
-        <p className="subpage-intro">
-          GC Science is a student-led publication featuring
-          research, projects, achievements and ideas in
-          science and technology.
-        </p>
+          <h1>GC Science</h1>
 
-        <div className="archive-grid">
-          <article className="archive-card">
-            <span>ISSUE 01</span>
-            <h2>GC Science</h2>
-            <p>
-              Explore the first collection of student
-              research and technology stories.
-            </p>
-            <a href="#">Read Issue →</a>
-          </article>
+          <p className="subpage-intro">
+            GC Science is a student-led publication featuring research, projects,
+            achievements and ideas in science and technology.
+          </p>
 
-          <article className="archive-card">
-            <span>ISSUE 02</span>
-            <h2>GC Science</h2>
-            <p>
-              Discover projects, research and ideas from
-              the SSTIA community.
-            </p>
-            <a href="#">Read Issue →</a>
-          </article>
+          <div className="gcs-grid">
+            {posts.map((post) => (
+              <Link
+                key={post.id}
+                to={`/activities/gc-science/${post.id}`}
+                className="gcs-card"
+              >
+                <div className="gcs-card-cover">
+                  <img src={post.cover} alt={post.title} loading="lazy" />
+                </div>
 
-          <article className="archive-card">
-            <span>ISSUE 03</span>
-            <h2>GC Science</h2>
-            <p>
-              Explore the latest student achievements in
-              science and technology.
-            </p>
-            <a href="#">Read Issue →</a>
-          </article>
+                <div className="gcs-card-body">
+                  <span className="gcs-card-date">
+                    {post.pinned && (
+                      <span className="gcs-card-pin">PINNED</span>
+                    )}
+
+                    {formatPostDate(post.publishTime)}
+                  </span>
+
+                  <h2>{post.title}</h2>
+
+                  <p className="gcs-card-author">{post.author}</p>
+
+                  <span className="gcs-card-read">Read →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
 
