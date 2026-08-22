@@ -28,8 +28,8 @@ function Workshops() {
 
               <ul className="workshop-list">
                 <li>
-                  <Link to="/activities/workshops/2026/web-development">
-                    Web Development
+                  <Link to="/activities/workshops/2026/latex">
+                    Latex
                   </Link>
                 </li>
               </ul>

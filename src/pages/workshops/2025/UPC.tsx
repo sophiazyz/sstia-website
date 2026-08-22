@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../../components/Navbar";
 import "../../../App.css";
-import "./Python.css";
-
+import "../Workshops.css";
 function UPC() {
   return (
     <div className="website">
@@ -46,9 +45,9 @@ function UPC() {
               </div>
 
               <div className="workshop-description">
-                <p>Time: TBD</p>
+                <p>Time: 2025.10.15 13:00-14:00</p>
 
-                <p>Location: TBD</p>
+                <p>Location: LBL 300</p>
 
                 <p>Bring: Curiosity and enthusiasm for physics.</p>
               </div>

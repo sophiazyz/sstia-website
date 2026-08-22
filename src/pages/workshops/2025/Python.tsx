@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../../components/Navbar";
 import "../../../App.css";
-import "./Python.css";
-
+import "../Workshops.css";
 function Python() {
   return (
     <div className="website">

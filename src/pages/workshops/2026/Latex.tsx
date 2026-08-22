@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Navbar from "../../../components/Navbar";
 import "../../../App.css";
 import "../Workshops.css";
-function Solidworks() {
+
+function Latex() {
   return (
     <div className="website">
       <Navbar />
@@ -16,11 +17,11 @@ function Solidworks() {
           <div className="workshop-container">
             <p className="section-label">WORKSHOPS / 2025</p>
 
-            <h1>SolidWorks</h1>
+            <h1>LaTeX</h1>
 
             <p className="workshop-intro">
-              A hands-on SolidWorks workshop designed to introduce students to
-              3D modeling, assembly design and engineering drawing.
+              A hands-on LaTeX workshop designed to introduce students to
+              professional typesetting and academic document preparation.
             </p>
           </div>
         </section>
@@ -36,20 +37,20 @@ function Solidworks() {
                 <p className="section-label">ABOUT THE WORKSHOP</p>
 
                 <h2>
-                  SolidWorks.
+                  LaTeX.
                   <br />
-                  Design.
+                  Write.
                   <br />
-                  Build.
+                  Publish.
                 </h2>
               </div>
 
               <div className="workshop-description">
-                <p>Time: 2025.11.23 16:00-18:00</p>
+                <p>Time: 2026.9.19 </p>
 
-                <p>Location: dzy 4-102</p>
+                <p>Location: TBD</p>
 
-                <p>Bring: Computer with SolidWorks installed.</p>
+                <p>Bring: Computer.</p>
               </div>
             </div>
 
@@ -64,38 +65,37 @@ function Solidworks() {
                 <article className="topic-card">
                   <span>01</span>
 
-                  <h3>Part Modeling</h3>
+                  <h3>LaTeX Basics</h3>
 
                   <p>
-                    Introduction to sketching, extrusion, revolution and other
-                    fundamental feature creation tools.
+                    Introduction to LaTeX syntax, document structure, sections,
+                    lists and basic formatting commands.
                   </p>
 
                   <p>
-                    Understanding design intent, constraints and parametric
-                    modeling concepts.
+                    Understanding compilation workflow and common error messages.
                   </p>
                 </article>
 
                 <article className="topic-card">
                   <span>02</span>
 
-                  <h3>Assembly Design</h3>
+                  <h3>Math &amp; Figures</h3>
 
                   <p>
-                    Learning how to create assemblies, apply mates and
-                    validate mechanical interactions between components.
+                    Learning how to typeset mathematical equations, insert
+                    figures, tables and cross-references.
                   </p>
                 </article>
 
                 <article className="topic-card">
                   <span>03</span>
 
-                  <h3>Engineering Drawings</h3>
+                  <h3>Academic Writing</h3>
 
                   <p>
-                    Generating detailed 2D drawings from 3D models with proper
-                    dimensions, annotations and views.
+                    Creating professional academic documents such as reports,
+                    presentations and posters using LaTeX templates.
                   </p>
                 </article>
               </div>
@@ -110,7 +110,7 @@ function Solidworks() {
 
               <div className="materials-list">
                 <a
-                  href="https://sjtu.feishu.cn/minutes/obcn9dn3r3h58354u28t1ji9"
+                  href="#"
                   className="material-link"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -120,6 +120,16 @@ function Solidworks() {
                   <span>↗</span>
                 </a>
 
+                <a
+                  href="#"
+                  className="material-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>GitHub Repository</span>
+
+                  <span>↗</span>
+                </a>
               </div>
             </div>
 
@@ -137,4 +147,4 @@ function Solidworks() {
   );
 }
 
-export default Solidworks;
+export default Latex;
