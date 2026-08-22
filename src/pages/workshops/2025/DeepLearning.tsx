@@ -109,7 +109,7 @@ function DeepLearning() {
             <div className="workshop-materials">
               <p className="section-label">WORKSHOP RESOURCES</p>
 
-              <div className="Feishu Meeting">
+              <div className="materials-list">
                 <a
                   href="https://sjtu.feishu.cn/minutes/obcn9w3qqg64718j1e81k5q9"
                   className="Feishu Meeting"
