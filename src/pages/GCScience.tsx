@@ -18,8 +18,8 @@ function GCScience() {
           <h1>GC Science</h1>
 
           <p className="subpage-intro">
-            GC Science is a student-led publication featuring research, projects,
-            achievements and ideas in science and technology.
+            GC Science is a student-led publication featuring research,
+            projects, achievements and ideas in science and technology.
           </p>
 
           <div className="gcs-grid">

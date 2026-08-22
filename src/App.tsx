@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Workshops from "./pages/Workshops";
@@ -11,26 +12,45 @@ import Competition from "./pages/departments/Competition";
 import Projects from "./pages/departments/Projects";
 import Publicity from "./pages/departments/Publicity";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-      <Route path="/activities/workshops" element={<Workshops />} />
+        <Route path="/activities/workshops" element={<Workshops />} />
 
-      <Route path="/activities/workshops/2025/python" element={<Python />} />
-      <Route path="/activities/workshops/2025/deep-learning" element={<DeepLearning />} />
+        <Route path="/activities/workshops/2025/python" element={<Python />} />
+        <Route
+          path="/activities/workshops/2025/deep-learning"
+          element={<DeepLearning />}
+        />
 
-      <Route path="/activities/events" element={<Events />} />
+        <Route path="/activities/events" element={<Events />} />
 
-      <Route path="/activities/gc-science" element={<GCScience />} />
+        <Route path="/activities/gc-science" element={<GCScience />} />
 
-      <Route path="/activities/gc-science/:postId" element={<GCSciencePost />} />
+        <Route
+          path="/activities/gc-science/:postId"
+          element={<GCSciencePost />}
+        />
 
-      <Route path="/departments/competition" element={<Competition />} />
-      <Route path="/departments/projects" element={<Projects />} />
-      <Route path="/departments/publicity" element={<Publicity />} />
-    </Routes>
+        <Route path="/departments/competition" element={<Competition />} />
+        <Route path="/departments/projects" element={<Projects />} />
+        <Route path="/departments/publicity" element={<Publicity />} />
+      </Routes>
+    </>
   );
 }
 

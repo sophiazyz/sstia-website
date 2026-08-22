@@ -41,14 +41,11 @@ const coverModules = import.meta.glob(
   { eager: true, query: "?url", import: "default" },
 ) as Record<string, string>;
 
-const htmlModules = import.meta.glob(
-  "../../assets/gs_science/*/index.html",
-  {
-    eager: true,
-    query: "?raw",
-    import: "default",
-  },
-) as Record<string, string>;
+const htmlModules = import.meta.glob("../../assets/gs_science/*/index.html", {
+  eager: true,
+  query: "?raw",
+  import: "default",
+}) as Record<string, string>;
 
 const imageModules = import.meta.glob(
   "../../assets/gs_science/*/images/*.{png,jpg,jpeg,gif,webp}",
