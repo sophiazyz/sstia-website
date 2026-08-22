@@ -5,6 +5,10 @@ import Home from "./pages/Home";
 import Workshops from "./pages/Workshops";
 import Python from "./pages/workshops/2025/Python";
 import DeepLearning from "./pages/workshops/2025/DeepLearning";
+import Latex from "./pages/workshops/2025/Latex";
+import Solidworks from "./pages/workshops/2025/Solidworks";
+import UPC from "./pages/workshops/2025/UPC";
+import LimingCupSampleCar from "./pages/workshops/2025/LimingCupSampleCar";
 import Events from "./pages/Events";
 import GCScience from "./pages/GCScience";
 import GCSciencePost from "./pages/gcscience/GCSciencePost";
@@ -37,6 +41,13 @@ function App() {
         <Route
           path="/activities/workshops/2025/deep-learning"
           element={<DeepLearning />}
+        />
+        <Route path="/activities/workshops/2025/latex" element={<Latex />} />
+        <Route path="/activities/workshops/2025/solidworks" element={<Solidworks />} />
+        <Route path="/activities/workshops/2025/upc" element={<UPC />} />
+        <Route
+          path="/activities/workshops/2025/liming-cup-sample-car"
+          element={<LimingCupSampleCar />}
         />
 
         <Route path="/activities/events" element={<Events />} />
