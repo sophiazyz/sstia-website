@@ -75,5 +75,3 @@ downloadTime: "2026-08-22T02:53:02.879Z"
   
 
   
-
-![](images/img-12.jpg)
