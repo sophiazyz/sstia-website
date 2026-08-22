@@ -112,7 +112,7 @@ function DeepLearning() {
               <div className="materials-list">
                 <a
                   href="https://sjtu.feishu.cn/minutes/obcn9w3qqg64718j1e81k5q9"
-                  className="materials-list"
+                  className="material-link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -128,6 +128,17 @@ function DeepLearning() {
                   rel="noopener noreferrer"
                 >
                   <span>GitHub Repository</span>
+
+                  <span>↗</span>
+                </a>
+
+                <a
+                  href="https://umji-sstia.github.io/Deep-Learning-Workshop/"
+                  className="material-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Workshop Website</span>
 
                   <span>↗</span>
                 </a>
