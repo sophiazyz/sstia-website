@@ -99,7 +99,7 @@ function Home() {
 
                   <p>
                     Hands-on workshops where students can learn new technologies
-                    and develop practical skills.
+                    and develop practical, applicable, and transferable skills.
                   </p>
 
                   <Link to="/activities/workshops">Learn More →</Link>
