@@ -26,6 +26,9 @@ function Navbar() {
         {/* Workshops */}
         <Link to="/activities/workshops">Workshops</Link>
 
+        {/* Events */}
+        <Link to="/activities/events">Events</Link>
+
         {/* GC Science */}
         <Link to="/activities/gc-science">GC Science</Link>
 

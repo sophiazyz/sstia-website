@@ -8,9 +8,14 @@ import DeepLearning from "./pages/workshops/2025/DeepLearning";
 import Events from "./pages/Events";
 import GCScience from "./pages/GCScience";
 import GCSciencePost from "./pages/gcscience/GCSciencePost";
+<<<<<<< HEAD
 import Competition from "./pages/departments/Competition";
 import Projects from "./pages/departments/Projects";
 import Publicity from "./pages/departments/Publicity";
+=======
+import YearEvents from "./pages/events/YearEvents";
+import EventPost from "./pages/events/EventPost";
+>>>>>>> 9310452 (feat: add Innovation Events section with year-based archive)
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,7 +44,14 @@ function App() {
 
         <Route path="/activities/events" element={<Events />} />
 
-        <Route path="/activities/gc-science" element={<GCScience />} />
+      <Route path="/activities/events/:year" element={<YearEvents />} />
+
+      <Route
+        path="/activities/events/:year/:postId"
+        element={<EventPost />}
+      />
+
+      <Route path="/activities/gc-science" element={<GCScience />} />
 
         <Route
           path="/activities/gc-science/:postId"

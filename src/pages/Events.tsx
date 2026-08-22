@@ -1,42 +1,48 @@
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import "../App.css";
+import "./events/events.css";
+import { getEventYears } from "./events/posts";
+
 function Events() {
+  const years = getEventYears();
+
   return (
-    <main className="subpage">
-      <div className="subpage-container">
-        <p className="section-label">ACTIVITIES</p>
+    <div className="website">
+      <Navbar />
 
-        <h1>Innovation Events</h1>
+      <main className="subpage">
+        <div className="subpage-container">
+          <p className="section-label">ACTIVITIES</p>
 
-        <p className="subpage-intro">
-          Discover innovation events, competitions, talks and other activities
-          that connect students through technology and creativity.
-        </p>
+          <h1>Innovation Events</h1>
 
-        <div className="archive-grid">
-          <article className="archive-card">
-            <span>2026</span>
-            <h2>2026 Events</h2>
-            <p>
-              Innovation events and student activities organized during 2026.
-            </p>
-            <a href="#">View Events →</a>
-          </article>
+          <p className="subpage-intro">
+            Discover innovation events, competitions, talks and other
+            activities that connect students through technology and
+            creativity.
+          </p>
 
-          <article className="archive-card">
-            <span>2025</span>
-            <h2>2025 Events</h2>
-            <p>Innovation events and student activities from 2025.</p>
-            <a href="#">View Events →</a>
-          </article>
+          <div className="archive-grid">
+            {years.map(({ year, count }) => (
+              <article className="archive-card" key={year}>
+                <span>{year}</span>
 
-          <article className="archive-card">
-            <span>2024</span>
-            <h2>2024 Events</h2>
-            <p>Explore previous innovation events and activities.</p>
-            <a href="#">View Events →</a>
-          </article>
+                <h2>{year} Events</h2>
+
+                <p>
+                  {count} innovation{" "}
+                  {count === 1 ? "event" : "events"} and student activities
+                  from {year}.
+                </p>
+
+                <Link to={`/activities/events/${year}`}>View Events →</Link>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
 
