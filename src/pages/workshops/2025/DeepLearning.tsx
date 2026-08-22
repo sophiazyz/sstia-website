@@ -46,11 +46,11 @@ function DeepLearning() {
               </div>
 
               <div className="workshop-description">
-                <p>Time: TBD</p>
+                <p>Time: 2026.4.26 14:00-16:00</p>
 
-                <p>Location: TBD</p>
+                <p>Location: dzy 4-102</p>
 
-                <p>Bring: Computer with Python and PyTorch installed.</p>
+                <p>Bring: Computer with Python installed.</p>
               </div>
             </div>
 
@@ -109,10 +109,10 @@ function DeepLearning() {
             <div className="workshop-materials">
               <p className="section-label">WORKSHOP RESOURCES</p>
 
-              <div className="materials-list">
+              <div className="Feishu Meeting">
                 <a
-                  href="#"
-                  className="material-link"
+                  href="https://sjtu.feishu.cn/minutes/obcn9w3qqg64718j1e81k5q9"
+                  className="Feishu Meeting"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -122,7 +122,7 @@ function DeepLearning() {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://github.com/UMJI-SSTIA/Deeplearning-wksp-2025"
                   className="material-link"
                   target="_blank"
                   rel="noopener noreferrer"
