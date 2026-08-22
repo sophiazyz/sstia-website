@@ -112,7 +112,7 @@ function DeepLearning() {
               <div className="materials-list">
                 <a
                   href="https://sjtu.feishu.cn/minutes/obcn9w3qqg64718j1e81k5q9"
-                  className="Feishu Meeting"
+                  className="materials-list"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
