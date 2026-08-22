@@ -52,6 +52,28 @@ const imageModules = import.meta.glob(
   { eager: true, query: "?url", import: "default" },
 ) as Record<string, string>;
 
+// Images identical across posts are stored once in src/assets/shared/
+// and resolved through manifest.json (see relativePath keys below).
+const sharedModules = import.meta.glob(
+  "../../assets/shared/*.{png,jpg,jpeg,gif,webp,svg}",
+  { eager: true, query: "?url", import: "default" },
+) as Record<string, string>;
+
+const sharedUrls: Record<string, string> = Object.fromEntries(
+  Object.entries(sharedModules).map(([key, url]) => [
+    key.slice(key.lastIndexOf("/") + 1),
+    url,
+  ]),
+);
+
+const manifestModules = import.meta.glob<Record<string, string>>(
+  "../../assets/shared/manifest.json",
+  { eager: true, import: "default" },
+);
+
+const sharedManifest: Record<string, string> =
+  manifestModules["../../assets/shared/manifest.json"] ?? {};
+
 /** Drop the "../../assets/gs_science/" prefix from a glob key. */
 function relativePath(key: string): string {
   const marker = "assets/gs_science/";
@@ -112,9 +134,12 @@ function extractArticle(html: string, postId: string): string {
       .replace(/<iframe[\s\S]*?<\/iframe>/gi, "")
       // Hidden WeChat style metadata
       .replace(/<p\s+style="display:\s*none"[\s\S]*?<\/p>/gi, "")
-      // Local image paths -> hashed asset URLs
+      // Local image paths -> hashed asset URLs (shared copies first)
       .replace(/src="images\/([^"]+)"/gi, (m, name: string) => {
-        const url = imageUrls[`${postId}/images/${name}`];
+        const key = `${postId}/images/${name}`;
+        const url =
+          imageUrls[key] ??
+          sharedUrls[sharedManifest[`gs_science/${key}`] ?? ""];
         return url ? `src="${url}"` : m;
       })
       // Lazy-load the long image lists
