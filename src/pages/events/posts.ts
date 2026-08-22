@@ -55,7 +55,7 @@ const imageModules = import.meta.glob(
   { eager: true, query: "?url", import: "default" },
 ) as Record<string, string>;
 
-// Images identical across posts are stored once in src/assets/shared/
+// GIFs identical across posts are stored once in src/assets/shared/
 // and resolved through manifest.json (see relativePath keys below).
 const sharedModules = import.meta.glob(
   "../../assets/shared/*.{png,jpg,jpeg,gif,webp,svg}",
