@@ -1,38 +1,64 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-import "../../App.css";
+import "./Publicity.css";
 
 function Publicity() {
   return (
-    <div className="website">
+    <div className="publicity-page">
       <Navbar />
 
-      <main className="subpage">
-        <div className="subpage-container">
+      <main className="publicity-container">
+        {/* Header Section */}
+        <header className="page-header">
           <p className="section-label">DEPARTMENTS</p>
-
-          <h1>Publicity · 宣传部</h1>
-
+          <h1 className="main-title">Publicity <span className="cn-title">· 宣传部</span></h1>
           <p className="subpage-intro">
-            Social Media &amp; SSTIA Merchandise Design
+            Elevating SSTIA's brand through creative design and strategic digital communication.
           </p>
+        </header>
 
-          {/* ============================= */}
-          {/* Content */}
-          {/* ============================= */}
-
-          <div className="department-content">
-            <p>Department introduction goes here.</p>
+        {/* Content Cards */}
+        <section className="content-grid">
+          {/* Card 1 */}
+          <div className="info-card">
+            <div className="card-content">
+              <span className="category-tag">Creative Design</span>
+              <h3>SSTIA Merchandise</h3>
+              <p>
+                We bring the spirit of SSTIA to life through tangible design. From apparel 
+                to stationery, our team handles the entire creative process — from initial 
+                sketching to material selection.
+              </p>
+            </div>
+            <Link to="/merchandise" className="learn-more">
+              Learn more <span>→</span>
+            </Link>
           </div>
 
-          {/* ============================= */}
-          {/* Back */}
-          {/* ============================= */}
-
-          <div className="workshop-back">
-            <Link to="/">← Back to Home</Link>
+          {/* Card 2 */}
+          <div className="info-card">
+            <div className="card-content">
+              <span className="category-tag">Social Media</span>
+              <h3>GCInnovation+</h3>
+              <p>
+                The digital voice of our community. We manage the official WeChat Account, 
+                delivering high-quality content, event highlights, and tech insights to 
+                thousands of followers.
+              </p>
+            </div>
+            <div className="learn-more">
+              Learn more by searching on WeChat
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Back Link */}
+        <footer className="page-footer">
+          <Link to="/" className="back-home">
+            ← Back to Home
+          </Link>
+        </footer>
       </main>
     </div>
   );

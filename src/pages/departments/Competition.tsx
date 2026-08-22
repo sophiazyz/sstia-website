@@ -1,38 +1,66 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-import "../../App.css";
+import "./Publicity.css";
 
 function Competition() {
   return (
-    <div className="website">
+    <div className="publicity-page">
       <Navbar />
 
-      <main className="subpage">
-        <div className="subpage-container">
+      <main className="publicity-container">
+        {/* Header Section */}
+        <header className="page-header">
           <p className="section-label">DEPARTMENTS</p>
-
-          <h1>Competition · 竞赛部</h1>
-
+          <h1 className="main-title">Competition <span className="cn-title">· 竞赛部</span></h1>
           <p className="subpage-intro">
-            Workshops &amp; Mechanical Competition Prototypes
+            Empowering students through hands-on workshops and comprehensive competition resources.
           </p>
+        </header>
 
-          {/* ============================= */}
-          {/* Content */}
-          {/* ============================= */}
-
-          <div className="department-content">
-            <p>Department introduction goes here.</p>
+        {/* Content Cards */}
+        <section className="content-grid">
+          {/* Card 1 */}
+          <div className="info-card">
+            <div className="card-content">
+              <span className="category-tag">Workshops</span>
+              <h3>Technical Workshops</h3>
+              <p>
+                We organize hands-on workshops covering various technologies 
+                and tools. From programming languages to engineering software, 
+                our workshops provide practical skills that complement academic 
+                learning and prepare students for real-world challenges.
+              </p>
+            </div>
+            <Link to="/activities/workshops" className="learn-more">
+              Learn more <span>→</span>
+            </Link>
           </div>
 
-          {/* ============================= */}
-          {/* Back */}
-          {/* ============================= */}
-
-          <div className="workshop-back">
-            <Link to="/">← Back to Home</Link>
+          {/* Card 2 */}
+          <div className="info-card">
+            <div className="card-content">
+              <span className="category-tag">Competitions</span>
+              <h3>Competition Information</h3>
+              <p>
+                We provide comprehensive information and support for academic 
+                competitions including MCM/ICM (Mathematical Contest in Modeling) 
+                and UPC (University Physics Competition). Get guidance on 
+                registration, preparation, and teamwork strategies.
+              </p>
+            </div>
+            <Link to="/activities/events" className="learn-more">
+              Learn more <span>→</span>
+            </Link>
           </div>
-        </div>
+        </section>
+
+        {/* Back Link */}
+        <footer className="page-footer">
+          <Link to="/" className="back-home">
+            ← Back to Home
+          </Link>
+        </footer>
       </main>
     </div>
   );

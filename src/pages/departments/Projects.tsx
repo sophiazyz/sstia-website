@@ -1,38 +1,66 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-import "../../App.css";
+import "./Publicity.css";
 
 function Projects() {
   return (
-    <div className="website">
+    <div className="publicity-page">
       <Navbar />
 
-      <main className="subpage">
-        <div className="subpage-container">
+      <main className="publicity-container">
+        {/* Header Section */}
+        <header className="page-header">
           <p className="section-label">DEPARTMENTS</p>
-
-          <h1>Projects · 项目部</h1>
-
+          <h1 className="main-title">Projects <span className="cn-title">· 项目部</span></h1>
           <p className="subpage-intro">
-            GC Science &amp; Mentor Meetups
+            Bridging knowledge and experience through publishing and mentorship.
           </p>
+        </header>
 
-          {/* ============================= */}
-          {/* Content */}
-          {/* ============================= */}
-
-          <div className="department-content">
-            <p>Department introduction goes here.</p>
+        {/* Content Cards */}
+        <section className="content-grid">
+          {/* Card 1 */}
+          <div className="info-card">
+            <div className="card-content">
+              <span className="category-tag">Publishing</span>
+              <h3>GC Science</h3>
+              <p>
+                A popular science platform dedicated to introducing cutting-edge 
+                knowledge and research. Content is curated and published through 
+                our official WeChat account GCInnovation+, making complex topics 
+                accessible to the student community.
+              </p>
+            </div>
+            <Link to="/activities/gc-science" className="learn-more">
+              Learn more <span>→</span>
+            </Link>
           </div>
 
-          {/* ============================= */}
-          {/* Back */}
-          {/* ============================= */}
-
-          <div className="workshop-back">
-            <Link to="/">← Back to Home</Link>
+          {/* Card 2 */}
+          <div className="info-card">
+            <div className="card-content">
+              <span className="category-tag">Mentorship</span>
+              <h3>Mentor Meetups</h3>
+              <p>
+                We organize in-person sessions where experienced mentors 
+                share their insights and experiences. These intimate gatherings 
+                provide students with valuable guidance on academic planning, 
+                career development, and industry trends.
+              </p>
+            </div>
+            <Link to="/activities/events" className="learn-more">
+              Learn more <span>→</span>
+            </Link>
           </div>
-        </div>
+        </section>
+
+        {/* Back Link */}
+        <footer className="page-footer">
+          <Link to="/" className="back-home">
+            ← Back to Home
+          </Link>
+        </footer>
       </main>
     </div>
   );
