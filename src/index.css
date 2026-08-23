@@ -89,13 +89,17 @@ a {
 
   padding: 0 clamp(20px, 5vw, 56px);
 
-  background: var(--color-paper-translucent);
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
-  border-bottom: 1px solid var(--color-rule);
+  background: transparent;
+  border-bottom: 1px solid transparent;
 
   z-index: 100;
 }
+
+/* The surface matches the section below the fixed bar, so content never shows through it. */
+.navbar-surface-paper { background: var(--color-paper); }
+.navbar-surface-parchment { background: var(--color-paper-2); }
+.navbar-surface-graphite { background: var(--color-graphite); }
+.navbar-surface-hero { background: transparent; }
 
 .logo {
   display: flex;
@@ -106,6 +110,7 @@ a {
   height: 40px;
   width: auto;
   object-fit: contain;
+  transition: filter var(--dur-short) var(--ease-out);
 }
 
 .nav-links {
@@ -117,7 +122,7 @@ a {
 .nav-links a {
   position: relative;
 
-  color: var(--color-ink-2);
+  color: var(--color-ink);
   text-decoration: none;
 
   font-size: 13px;
@@ -144,6 +149,18 @@ a {
 
 .nav-links a:hover {
   color: var(--color-ink);
+}
+
+.navbar-dark .logo-img {
+  filter: brightness(0) invert(1);
+}
+
+.navbar-dark .nav-links a {
+  color: #ffffff;
+}
+
+.navbar-dark .nav-links a:hover {
+  color: #ffffff;
 }
 
 .nav-links a:hover::after {

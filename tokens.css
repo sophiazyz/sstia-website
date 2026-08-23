@@ -7,7 +7,7 @@
   /* Colour — cool engineered canvas + one cobalt signal */
   --color-paper:            oklch(98.5% 0.004 250);
   --color-paper-2:          oklch(96.4% 0.005 250);
-  --color-paper-translucent: oklch(98.5% 0.004 250 / 0.82);
+  --color-paper-translucent: rgb(178 230 253 / 0.72);
   --color-ink:              oklch(24% 0.02 258);
   --color-ink-2:            oklch(34% 0.018 257);
   --color-ink-3:            oklch(52% 0.016 257);
