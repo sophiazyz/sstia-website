@@ -19,7 +19,7 @@ function DeepLearning() {
             <h1>Deep Learning</h1>
 
             <p className="workshop-intro">
-              A hands-on Deep Learning workshop that takes you from core prerequisites to classic models (KNN, CNN, RNN) and cutting-edge topics like PPO and VLA – all with real coding practice.
+              A hands-on Deep Learning workshop that takes you from core prerequisites to classic models (KNN, CNN, RNN) and cutting-edge topics like PPO and VLA - all with real coding practice.
             </p>
           </div>
         </section>
@@ -66,7 +66,7 @@ function DeepLearning() {
                   <h3>Prerequisite Knowledge</h3>
 
                   <p>
-                    Brush up on Python, NumPy, linear algebra, calculus, and basic machine learning concepts – so you can jump straight into deep learning without getting stuck.
+                    Brush up on Python, NumPy, linear algebra, calculus, and basic machine learning concepts - so you can jump straight into deep learning without getting stuck.
                   </p>
 
 
@@ -88,7 +88,7 @@ function DeepLearning() {
                   <h3>PPO & VLA</h3>
 
                   <p>
-                    Explore Proximal Policy Optimization (PPO) for reinforcement learning, and Vision‑Language‑Action (VLA) models that unify perception, language, and control – the cutting edge of embodied AI.
+                    Explore Proximal Policy Optimization (PPO) for reinforcement learning, and Vision-Language-Action (VLA) models that unify perception, language, and control.
 
 
                   </p>

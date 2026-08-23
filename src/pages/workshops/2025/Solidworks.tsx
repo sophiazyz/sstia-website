@@ -91,10 +91,10 @@ function Solidworks() {
                 <article className="topic-card">
                   <span>03</span>
 
-                  <h3>Hands‑on Modeling</h3>
+                  <h3>Hands-on Modeling</h3>
 
                   <p>
-                    Live instructor‑led modeling from scratch. Create parts, assemblies, and drawings together in SolidWorks – no prior experience needed.
+                    Live instructor-led modeling from scratch. Create parts, assemblies, and drawings together in SolidWorks - no prior experience needed.
                   </p>
                 </article>
               </div>
