@@ -16,6 +16,7 @@ import GCSciencePost from "./pages/gcscience/GCSciencePost";
 import Competition from "./pages/departments/Competition";
 import Projects from "./pages/departments/Projects";
 import Publicity from "./pages/departments/Publicity";
+import Merchandise from "./pages/departments/Merchandise";
 import YearEvents from "./pages/events/YearEvents";
 import EventPost from "./pages/events/EventPost";
 
@@ -71,6 +72,7 @@ function App() {
         <Route path="/departments/competition" element={<Competition />} />
         <Route path="/departments/projects" element={<Projects />} />
         <Route path="/departments/publicity" element={<Publicity />} />
+        <Route path="/merchandise" element={<Merchandise />} />
       </Routes>
     </>
   );

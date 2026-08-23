@@ -26,8 +26,8 @@ function Publicity() {
               <span className="category-tag">Creative Design</span>
               <h3>SSTIA Merchandise</h3>
               <p>
-                We bring the spirit of SSTIA to life through tangible design. From apparel 
-                to stationery, our team handles the entire creative process — from initial 
+                We bring the spirit of SSTIA to life by designing and producing logos, cultural creative merchandise, and emoji packs.
+                We handle the entire creative process — from initial 
                 sketching to material selection.
               </p>
             </div>
@@ -44,7 +44,7 @@ function Publicity() {
               <p>
                 The digital voice of our community. We manage the official WeChat Account, 
                 delivering high-quality content, event highlights, and tech insights to 
-                thousands of followers.
+                our dedicated followers.
               </p>
             </div>
             <div className="learn-more">

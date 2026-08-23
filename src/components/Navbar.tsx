@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   const location = useLocation();
@@ -7,7 +8,9 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">SSTIA</div>
+      <div className="logo">
+        <img src={logo} alt="SSTIA Logo" className="logo-img" />
+      </div>
 
       <div className="nav-links">
         {/* Home */}
@@ -23,14 +26,8 @@ function Navbar() {
           <Link to="/#activities">Activities</Link>
         )}
 
-        {/* Workshops */}
-        <Link to="/activities/workshops">Workshops</Link>
-
-        {/* Events */}
-        <Link to="/activities/events">Events</Link>
-
-        {/* GC Science */}
-        <Link to="/activities/gc-science">GC Science</Link>
+        {/* Merchandise */}
+        <Link to="/merchandise">Merchandise</Link>
 
         {/* Members */}
         {isHome ? (

@@ -91,11 +91,10 @@ function Solidworks() {
                 <article className="topic-card">
                   <span>03</span>
 
-                  <h3>Engineering Drawings</h3>
+                  <h3>Hands‑on Modeling</h3>
 
                   <p>
-                    Generating detailed 2D drawings from 3D models with proper
-                    dimensions, annotations and views.
+                    Live instructor‑led modeling from scratch. Create parts, assemblies, and drawings together in SolidWorks – no prior experience needed.
                   </p>
                 </article>
               </div>

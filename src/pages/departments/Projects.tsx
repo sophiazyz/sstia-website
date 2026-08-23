@@ -26,7 +26,7 @@ function Projects() {
               <span className="category-tag">Publishing</span>
               <h3>GC Science</h3>
               <p>
-                A popular science platform dedicated to introducing cutting-edge 
+                A science platform dedicated to introducing cutting-edge 
                 knowledge and research. Content is curated and published through 
                 our official WeChat account GCInnovation+, making complex topics 
                 accessible to the student community.
@@ -44,7 +44,7 @@ function Projects() {
               <h3>Mentor Meetups</h3>
               <p>
                 We organize in-person sessions where experienced mentors 
-                share their insights and experiences. These intimate gatherings 
+                share their insights and professional knowledges. These intimate gatherings 
                 provide students with valuable guidance on academic planning, 
                 career development, and industry trends.
               </p>

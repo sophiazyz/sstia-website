@@ -19,8 +19,7 @@ function DeepLearning() {
             <h1>Deep Learning</h1>
 
             <p className="workshop-intro">
-              A hands-on Deep Learning workshop designed to introduce students to
-              neural networks and practical AI applications.
+              A hands-on Deep Learning workshop that takes you from core prerequisites to classic models (KNN, CNN, RNN) and cutting-edge topics like PPO and VLA – all with real coding practice.
             </p>
           </div>
         </section>
@@ -64,38 +63,34 @@ function DeepLearning() {
                 <article className="topic-card">
                   <span>01</span>
 
-                  <h3>Neural Network Basics</h3>
+                  <h3>Prerequisite Knowledge</h3>
 
                   <p>
-                    Introduction to neurons, activation functions, forward
-                    propagation and backpropagation.
+                    Brush up on Python, NumPy, linear algebra, calculus, and basic machine learning concepts – so you can jump straight into deep learning without getting stuck.
                   </p>
 
-                  <p>
-                    Understanding loss functions, optimizers and the training
-                    loop.
-                  </p>
+
                 </article>
 
                 <article className="topic-card">
                   <span>02</span>
 
-                  <h3>Model Architectures</h3>
+                  <h3>Core Models: KNN, CNN, RNN</h3>
 
                   <p>
-                    Exploring CNNs, RNNs and Transformers — the building blocks
-                    behind modern deep learning systems.
+                    Start with KNN and linear classifiers, then dive into convolutional neural networks for image processing and recurrent neural networks for sequence modeling. Understand their inner workings and when to use each.
                   </p>
                 </article>
 
                 <article className="topic-card">
                   <span>03</span>
 
-                  <h3>Practical Training</h3>
+                  <h3>PPO & VLA</h3>
 
                   <p>
-                    Building and training your own deep learning models using
-                    PyTorch to solve real-world problems.
+                    Explore Proximal Policy Optimization (PPO) for reinforcement learning, and Vision‑Language‑Action (VLA) models that unify perception, language, and control – the cutting edge of embodied AI.
+
+
                   </p>
                 </article>
               </div>
