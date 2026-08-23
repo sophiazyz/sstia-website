@@ -45,7 +45,7 @@ function Home() {
           <div className="about-container">
             <div className="about-title">
               <p className="section-label">WHO WE ARE</p>
-              <h2>About SSTIA</h2>
+              <h2>About<br />SSTIA</h2>
             </div>
 
             <div className="about-content">
