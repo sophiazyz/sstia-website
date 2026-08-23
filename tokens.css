@@ -1,0 +1,70 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Marquee Hero + Catalogue
+ * theme: Cobalt · design-system: design.md · designed-as-app
+ * paper: cool near-white · accent: electric cobalt · display: Space Grotesk
+ * body: Inter · mono: JetBrains Mono
+ */
+:root {
+  /* Colour — cool engineered canvas + one cobalt signal */
+  --color-paper:            oklch(98.5% 0.004 250);
+  --color-paper-2:          oklch(96.4% 0.005 250);
+  --color-paper-translucent: oklch(98.5% 0.004 250 / 0.82);
+  --color-ink:              oklch(24% 0.02 258);
+  --color-ink-2:            oklch(34% 0.018 257);
+  --color-ink-3:            oklch(52% 0.016 257);
+  --color-rule:             oklch(24% 0.02 258 / 0.10);
+  --color-rule-strong:      oklch(24% 0.02 258 / 0.16);
+
+  --color-accent:           oklch(58% 0.20 256);          /* the signal */
+  --color-accent-text:      oklch(50% 0.19 256);          /* accent text on light */
+  --color-accent-hover:     oklch(50% 0.20 256);
+  --color-accent-bright:    oklch(72% 0.15 256);          /* accent text on dark */
+  --color-accent-soft:      oklch(58% 0.20 256 / 0.12);
+  --color-accent-ink:       oklch(99% 0 0);
+  --color-focus:            oklch(58% 0.20 256);
+
+  /* Graphite — the one dark band */
+  --color-graphite:         oklch(22% 0.016 260);
+  --color-graphite-2:       oklch(26% 0.016 260);
+  --color-graphite-3:       oklch(30% 0.018 258);
+  --color-graphite-ink:     oklch(96% 0.006 250);
+  --color-graphite-mut:     oklch(72% 0.015 255);
+  --color-graphite-rule:    oklch(100% 0 0 / 0.14);
+
+  /* Typography — 2+1: display + body + mono outlier */
+  --font-display: "Space Grotesk", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-body:    "Inter", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Spacing — 4-pt scale */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 7rem;
+
+  /* Type scale — major third */
+  --text-xs:      0.75rem;
+  --text-sm:      0.875rem;
+  --text-base:    1rem;
+  --text-md:      1.125rem;
+  --text-lg:      1.25rem;
+  --text-xl:      1.5rem;
+  --text-2xl:     1.875rem;
+  --text-3xl:     2.25rem;
+  --text-4xl:     3rem;
+  --text-display: clamp(2.5rem, 6vw + 0.5rem, 4.75rem);
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-short:   220ms;
+  --dur-med:     340ms;
+
+  /* Radius — drawn with a ruler */
+  --radius-card: 6px;
+  --radius-pill: 999px;
+}
