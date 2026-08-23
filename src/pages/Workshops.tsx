@@ -22,9 +22,9 @@ function Workshops() {
             {/* 2026 */}
 
             <article className="archive-card">
-              <span>2026</span>
+              <span>WORKSHOPS/26FA-</span>
 
-              <h2>2026 Workshops</h2>
+              <h2>2026 ACADEMIC YEAR</h2>
 
               <ul className="workshop-list">
                 <li>
@@ -38,29 +38,13 @@ function Workshops() {
             {/* 2025 */}
 
             <article className="archive-card">
-              <span>2025</span>
+              <span>WORKSHOPS/25FA-26SU</span>
 
-              <h2>2025 Workshops</h2>
+              <h2>2025 ACADEMIC YEAR</h2>
 
               <ul className="workshop-list">
                 <li>
-                  <Link to="/activities/workshops/2025/python">Python</Link>
-                </li>
-
-                <li>
-                  <Link to="/activities/workshops/2025/deep-learning">
-                    Deep Learning
-                  </Link>
-                </li>
-
-                <li>
                   <Link to="/activities/workshops/2025/latex">LaTeX</Link>
-                </li>
-
-                <li>
-                  <Link to="/activities/workshops/2025/solidworks">
-                    SolidWorks
-                  </Link>
                 </li>
 
                 <li>
@@ -68,9 +52,19 @@ function Workshops() {
                 </li>
 
                 <li>
-                  <Link to="/activities/workshops/2025/liming-cup-sample-car">
-                    Liming Cup Sample Car
-                  </Link>
+                  <Link to="/activities/workshops/2025/solidworks">SolidWorks</Link>
+                </li>
+
+                <li>
+                  <Link to="/activities/workshops/2025/python">Python</Link>
+                </li>
+
+                <li>
+                  <Link to="/activities/workshops/2025/liming-cup-sample-car">Liming Cup Sample Car</Link>
+                </li>
+
+                <li>
+                  <Link to="/activities/workshops/2025/deep-learning">Deep Learning</Link>
                 </li>
               </ul>
             </article>
