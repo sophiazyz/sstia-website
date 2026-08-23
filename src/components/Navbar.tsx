@@ -68,7 +68,15 @@ function Navbar() {
   return (
     <nav className={`navbar navbar-surface-${surface}${lightMode ? " navbar-dark" : ""}`}>
       <div className="logo">
-        <img src={logo} alt="SSTIA Logo" className="logo-img" />
+        {isHome ? (
+          <a href="#about" aria-label="Go to About SSTIA">
+            <img src={logo} alt="SSTIA Logo" className="logo-img" />
+          </a>
+        ) : (
+          <Link to="/#about" aria-label="Go to About SSTIA">
+            <img src={logo} alt="SSTIA Logo" className="logo-img" />
+          </Link>
+        )}
       </div>
 
       <div className="nav-links">
