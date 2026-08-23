@@ -17,7 +17,7 @@ interface MerchItem {
   alt: string;
   description: string;
 }
-
+  
 const merchItems: MerchItem[] = [
   { src: img1, alt: "Merchandise 1", description: "SSTIA Booklet" },
   { src: img2, alt: "Merchandise 2", description: "Code Snippet Card" },
