@@ -22,7 +22,7 @@ function Workshops() {
             {/* 2026 */}
 
             <article className="archive-card">
-              <span>WORKSHOPS/26FA-</span>
+              <span>WORKSHOPS/26FA-27SU</span>
 
               <h2>2026 ACADEMIC YEAR</h2>
 
