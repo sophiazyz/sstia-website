@@ -1,316 +1,286 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* Hallmark · genre: modern-minimal · macrostructure: Marquee Hero + Catalogue
+ * theme: Cobalt · design-system: design.md · designed-as-app
+ * anchor hue: electric cobalt · display: Space Grotesk · body: Inter · mono: JetBrains Mono
+ */
 
 .website {
   min-height: 100vh;
 }
 
-/* Navbar */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 60px;
-
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-
-  z-index: 100;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  height: 54px;
-  width: auto;
-  object-fit: contain;
-}
-
-.nav-links {
-  display: flex;
-  gap: 36px;
-}
-
-.nav-links a {
-  color: #222;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-
-  transition: opacity 0.2s ease;
-}
-
-.nav-links a:hover {
-  opacity: 0.5;
-}
-
-/* Hero */
+/* =========================================================
+   Hero — full-bleed photo, left-biased, cool graphite scrim
+   ========================================================= */
 
 .hero {
-  height: 720px;
+  position: relative;
+  min-height: 720px;
+  height: min(84vh, 820px);
 
   background-image: url("./assets/hero.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 42%;
   background-repeat: no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--color-graphite) 74%, transparent) 0%,
+    color-mix(in oklab, var(--color-graphite) 28%, transparent) 55%,
+    transparent 100%
+  );
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
 
-  padding-left: 10%;
-  padding-top: 140px;
-  color: white;
+  padding: 176px clamp(24px, 10vw, 120px) 96px;
+  color: var(--color-graphite-ink);
 }
 
 .hero-small-title {
-  font-size: 13px;
-  letter-spacing: 3px;
-  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 0 30px;
+
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--color-graphite-mut);
+}
+
+.hero-small-title::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--color-accent);
+  flex: none;
 }
 
 .hero h1 {
   margin: 0;
 
-  font-size: clamp(56px, 8vw, 110px);
-  line-height: 0.95;
-  letter-spacing: -4px;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 7.2vw, 96px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -3.2px;
 }
 
 .hero-description {
-  max-width: 550px;
+  max-width: 520px;
+  margin: 30px 0 36px;
 
-  margin-top: 32px;
-  margin-bottom: 36px;
+  font-size: 17px;
+  line-height: 1.55;
+  letter-spacing: -0.2px;
 
-  font-size: 18px;
-  line-height: 1.6;
+  color: var(--color-graphite-mut);
 }
 
 .hero-button {
   display: inline-block;
 
-  padding: 14px 28px;
+  padding: 13px 22px;
 
-  background: white;
-  color: #111;
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+
+  border-radius: var(--radius-card);
 
   text-decoration: none;
 
   font-size: 14px;
   font-weight: 600;
+  letter-spacing: -0.1px;
 
-  transition: all 0.2s ease;
+  transition:
+    transform var(--dur-short) var(--ease-out),
+    background var(--dur-short) var(--ease-out);
 }
 
 .hero-button:hover {
-  transform: translateY(-3px);
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
 }
 
-/* Placeholder sections */
-
-.placeholder-section {
-  min-height: 70vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #f5f5f5;
-
-  border-bottom: 1px solid #ddd;
+.hero-button:active {
+  transform: translateY(0) scale(0.97);
 }
 
-.placeholder-section h2 {
-  font-size: 48px;
-}
-
-/* About Section */
+/* =========================================================
+   About
+   ========================================================= */
 
 .about-section {
-  min-height: 80vh;
-  padding: 140px 60px;
-
-  background: #ffffff;
+  padding: 120px clamp(24px, 6vw, 80px);
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .about-container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 100px;
+  gap: clamp(48px, 8vw, 112px);
 
   align-items: start;
-}
-
-.section-label {
-  margin: 0 0 20px;
-
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-
-  color: #777;
 }
 
 .about-title h2 {
   margin: 0;
 
-  font-size: clamp(48px, 6vw, 80px);
-  line-height: 1;
-  letter-spacing: -3px;
+  font-size: clamp(42px, 5.5vw, 68px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -2.4px;
+
+  color: var(--color-ink);
 }
 
 .about-content {
   max-width: 650px;
 
   font-size: 17px;
-  line-height: 1.8;
+  line-height: 1.62;
+  letter-spacing: -0.22px;
 
-  color: #444;
+  color: var(--color-ink-2);
 }
 
 .about-lead {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 
-  font-size: 25px;
-  line-height: 1.5;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: -0.3px;
 
-  color: #111;
+  color: var(--color-ink);
 }
 
 .about-content p {
   margin-bottom: 24px;
 }
 
-/* Activities Section */
+/* =========================================================
+   Activities — hairline grid
+   ========================================================= */
 
 .activities-section {
-  padding: 140px 60px;
-
-  background: #f5f5f5;
+  padding: 120px clamp(24px, 6vw, 80px);
+  background: var(--color-paper-2);
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .activities-container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
 .activities-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
-
+  gap: 64px;
   align-items: end;
 
-  margin-bottom: 80px;
+  margin-bottom: 64px;
 }
 
 .activities-header h2 {
   margin: 0;
 
-  font-size: clamp(48px, 6vw, 80px);
-  line-height: 1;
-  letter-spacing: -3px;
+  font-size: clamp(42px, 5.5vw, 68px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -2.4px;
+
+  color: var(--color-ink);
 }
 
 .activities-intro {
   max-width: 500px;
-
   margin: 0;
 
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.55;
+  letter-spacing: -0.2px;
 
-  color: #555;
+  color: var(--color-ink-3);
 }
 
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
 
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
+  background: var(--color-rule);
+  border: 1px solid var(--color-rule);
 }
 
 .activity-card {
-  min-height: 360px;
-
-  padding: 40px;
+  min-height: 330px;
+  padding: 32px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  background: var(--color-paper);
 
-  background: white;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+  transition: background-color var(--dur-short) var(--ease-out);
 }
 
 .activity-card:hover {
-  transform: translateY(-8px);
-  background: #111;
-  color: white;
+  background: var(--color-graphite);
 }
 
 .activity-number {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+
+  color: var(--color-accent);
 }
 
 .activity-card h3 {
   margin: 0 0 20px;
 
-  font-size: 28px;
-  line-height: 1.2;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+
+  color: var(--color-ink);
+
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .activity-card p {
   margin: 0 0 30px;
 
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.62;
 
-  color: #666;
-}
+  color: var(--color-ink-3);
 
-.activity-card:hover p {
-  color: #ccc;
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .activity-card a {
-  color: inherit;
+  color: var(--color-accent-text);
 
   font-size: 14px;
   font-weight: 600;
@@ -318,202 +288,69 @@ body {
   text-decoration: none;
 }
 
-/* ============================= */
-/* Workshops Page */
-/* ============================= */
-
-.subpage {
-  min-height: 100vh;
-  background: #f5f5f5;
+.activity-card:hover h3 {
+  color: var(--color-graphite-ink);
 }
 
-.subpage-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.activity-card:hover p {
+  color: var(--color-graphite-mut);
 }
 
-.subpage > .subpage-container {
-  padding: 140px 60px;
-}
-
-.subpage h1 {
-  margin: 0;
-
-  font-size: clamp(56px, 8vw, 100px);
-  line-height: 1;
-  letter-spacing: -4px;
-
-  color: #111;
-}
-
-.subpage-intro {
-  max-width: 650px;
-
-  margin-top: 35px;
-
-  font-size: 18px;
-  line-height: 1.7;
-
-  color: #555;
-}
-
-/* Workshop archive */
-
-.archive-grid {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 24px;
-
-  margin-top: 80px;
-}
-
-.archive-card {
-  min-height: 360px;
-
-  padding: 40px;
-
-  background: white;
-
-  border: 1px solid #ddd;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease;
-}
-
-.archive-card:hover {
-  transform: translateY(-8px);
-
-  background: #111;
-
-  color: white;
-}
-
-/* Year */
-
-.archive-card > span {
-  display: block;
-
-  margin-bottom: 25px;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  color: #777;
-}
-
-.archive-card:hover > span {
-  color: #aaa;
-}
-
-/* Title */
-
-.archive-card h2 {
-  margin: 0;
-
-  font-size: 32px;
-  line-height: 1.2;
-
-  color: #111;
-}
-
-.archive-card:hover h2 {
-  color: white;
-}
-
-/* Workshop list */
-
-.workshop-list {
-  margin: 35px 0 0;
-
-  padding-left: 22px;
-}
-
-.workshop-list li {
-  margin-bottom: 15px;
-
-  padding-left: 4px;
-
-  color: #111;
-}
-
-.workshop-list a {
-  color: #111;
-
-  font-size: 16px;
-  font-weight: 600;
-
-  text-decoration: none;
-
-  transition: opacity 0.2s ease;
-}
-
-.workshop-list a:hover {
-  text-decoration: underline;
-}
-
-.archive-card:hover .workshop-list li {
-  color: white;
-}
-
-.archive-card:hover .workshop-list a {
-  color: white;
+.activity-card:hover a {
+  color: var(--color-accent-bright);
 }
 
 /* =========================================================
-   ORGANIZATION SECTION
+   Organization — the one graphite band
    ========================================================= */
 
 .organization-section {
-  padding: 140px 60px;
-  background: #080d18;
-  color: white;
+  padding: 120px clamp(24px, 6vw, 80px);
+  background: var(--color-graphite);
+  color: var(--color-graphite-ink);
 }
 
 .organization-container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
 }
-
-/* =========================================================
-   ORGANIZATION HEADER
-   ========================================================= */
 
 .organization-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: 64px;
   align-items: end;
-  margin-bottom: 90px;
+
+  margin-bottom: 64px;
 }
 
 .organization-label {
-  color: #7d8da8;
+  color: var(--color-accent-bright);
 }
 
 .organization-header h2 {
   margin: 0;
-  font-size: clamp(48px, 6vw, 80px);
-  line-height: 1;
-  letter-spacing: -3px;
+
+  font-size: clamp(42px, 5.5vw, 68px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -2.4px;
+
+  color: var(--color-graphite-ink);
 }
 
 .organization-intro {
   max-width: 500px;
   margin: 0;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #9ca9bd;
+
+  font-size: 17px;
+  line-height: 1.55;
+  letter-spacing: -0.2px;
+
+  color: var(--color-graphite-mut);
 }
 
-/* =========================================================
-   MAIN ORGANIZATION
-   ========================================================= */
+/* Main organization */
 
 .organization-structure {
   position: relative;
@@ -521,8 +358,11 @@ body {
 
 .organization-main {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+
+  background: var(--color-graphite-rule);
+  border: 1px solid var(--color-graphite-rule);
 }
 
 .organization-card {
@@ -533,50 +373,46 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(150, 180, 220, 0.2);
+  background: var(--color-graphite-2);
 
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease;
+  transition: background-color var(--dur-short) var(--ease-out);
 }
 
 .organization-card:hover {
-  transform: translateY(-6px);
-  background: rgba(70, 130, 200, 0.1);
-  border-color: rgba(120, 180, 255, 0.5);
+  background: var(--color-graphite-3);
 }
 
 .organization-card-main {
-  background: rgba(70, 130, 200, 0.08);
-  border-color: rgba(120, 180, 255, 0.35);
+  background: color-mix(in oklab, var(--color-accent) 12%, var(--color-graphite-2));
 }
 
 .organization-number {
+  font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #6f83a0;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+
+  color: var(--color-accent-bright);
 }
 
 .organization-card h3 {
   margin: 0 0 8px;
+
   font-size: 30px;
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: -0.7px;
 }
 
 .organization-card p {
   margin: 0;
+
   font-size: 12px;
   letter-spacing: 2px;
-  color: #71839d;
+
+  color: var(--color-graphite-mut);
 }
 
-/* =========================================================
-   DEPARTMENT STRUCTURE
-   ========================================================= */
+/* Department tree */
 
 .department-structure {
   position: relative;
@@ -584,77 +420,36 @@ body {
   padding-top: 90px;
 }
 
-/* =========================================================
-   VERTICAL LINE
-   Department Heads
-          |
-          |
-          ●
-   ========================================================= */
-
 .department-main-line {
   position: absolute;
-
   width: 1px;
   height: 90px;
-
-  background: #45698f;
-
+  background: var(--color-accent);
   top: 0;
   left: 50%;
-
   transform: translateX(-50%);
-
   z-index: 2;
 }
 
-/* =========================================================
-   HORIZONTAL LINE
-        ─────●─────
-        |    |    |
-   ========================================================= */
-
 .department-horizontal-line {
   position: absolute;
-
   height: 1px;
-
-  background: #45698f;
-
-  /*
-    Three cards occupy equal width.
-
-    The horizontal line starts
-    at the center of the first card
-    and ends at the center of the third card.
-  */
-
-  left: calc(15.8%);
-  right: calc(15.8%);
-
+  background: color-mix(in oklab, var(--color-accent) 40%, transparent);
+  left: 15.8%;
+  right: 15.8%;
   top: 89px;
-
   z-index: 1;
 }
-
-/* =========================================================
-   DEPARTMENT GRID
-   ========================================================= */
 
 .department-grid {
   position: relative;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
 
   margin-top: 90px;
 }
-
-/* =========================================================
-   DEPARTMENT CARD
-   ========================================================= */
 
 .department-card {
   position: relative;
@@ -665,81 +460,56 @@ body {
   display: flex;
   flex-direction: column;
 
-  background: #101620;
-
-  border: 1px solid #273548;
-
-  box-sizing: border-box;
+  background: var(--color-graphite-2);
+  border: 1px solid var(--color-graphite-rule);
 
   transition:
-    border-color 0.3s ease,
-    background 0.3s ease,
-    transform 0.3s ease;
+    border-color var(--dur-short) var(--ease-out),
+    background-color var(--dur-short) var(--ease-out),
+    transform var(--dur-short) var(--ease-out);
 }
 
 .department-card:hover {
-  border-color: #45698f;
-  background: #111b28;
+  border-color: var(--color-accent);
+  background: var(--color-graphite-3);
   transform: translateY(-4px);
 }
 
-/* =========================================================
-   VERTICAL LINE ABOVE EACH DEPARTMENT
-   ========================================================= */
-
 .department-card::before {
   content: "";
-
   position: absolute;
-
   width: 1px;
   height: 90px;
-
-  background: #45698f;
-
+  background: var(--color-accent);
   left: 50%;
   top: -90px;
-
   transform: translateX(-50%);
-
   z-index: 2;
 }
-
-/* =========================================================
-   DEPARTMENT NUMBER
-   ========================================================= */
 
 .department-number {
   display: block;
 
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-
-  color: #6689b2;
-
   margin-bottom: 68px;
-}
 
-/* =========================================================
-   DEPARTMENT TITLE
-   ========================================================= */
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+
+  color: var(--color-accent-bright);
+}
 
 .department-card h3 {
   margin: 0;
 
   font-size: 36px;
   line-height: 1.15;
-
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: -0.7px;
 
-  color: #f4f5f7;
+  color: var(--color-graphite-ink);
 }
-
-/* =========================================================
-   CHINESE SUBTITLE
-   ========================================================= */
 
 .department-card p {
   margin: 12px 0 0;
@@ -747,25 +517,16 @@ body {
   font-size: 14px;
   letter-spacing: 2px;
 
-  color: #6689b2;
+  color: var(--color-accent-bright);
 }
-
-/* =========================================================
-   DIVIDER
-   ========================================================= */
 
 .department-line {
   width: 100%;
-
   margin-top: 38px;
   padding-top: 28px;
 
-  border-top: 1px solid #45698f;
+  border-top: 1px solid var(--color-graphite-rule);
 }
-
-/* =========================================================
-   DESCRIPTION
-   ========================================================= */
 
 .department-description {
   display: block;
@@ -773,12 +534,8 @@ body {
   font-size: 16px;
   line-height: 1.6;
 
-  color: #91a5bf;
+  color: var(--color-graphite-mut);
 }
-
-/* =========================================================
-   LEARN MORE LINK
-   ========================================================= */
 
 .department-card a {
   display: inline-block;
@@ -787,7 +544,7 @@ body {
   margin-top: auto;
   padding-top: 28px;
 
-  color: #6689b2;
+  color: var(--color-accent-bright);
 
   font-size: 14px;
   font-weight: 600;
@@ -795,36 +552,198 @@ body {
 
   text-decoration: none;
 
-  transition: color 0.25s ease;
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .department-card a:hover {
-  color: #f4f5f7;
+  color: var(--color-graphite-ink);
+}
+
+/* =========================================================
+   Subpage (Workshops / Events / GC Science index)
+   ========================================================= */
+
+.subpage {
+  min-height: 100vh;
+  background: var(--color-paper);
+}
+
+.subpage-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.subpage > .subpage-container {
+  padding: 148px clamp(24px, 6vw, 80px) 112px;
+}
+
+.subpage h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -3px;
+
+  color: var(--color-ink);
+}
+
+.subpage-intro {
+  margin-top: 30px;
+}
+
+/* Archive (year cards) */
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+
+  margin-top: 64px;
+}
+
+.archive-card {
+  min-height: 340px;
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
+
+  transition:
+    background-color var(--dur-short) var(--ease-out),
+    border-color var(--dur-short) var(--ease-out),
+    transform var(--dur-short) var(--ease-out);
+}
+
+.archive-card:hover {
+  background: var(--color-graphite);
+  border-color: var(--color-graphite);
+  transform: translateY(-4px);
+}
+
+.archive-card > span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+
+  color: var(--color-accent);
+}
+
+.archive-card h2 {
+  margin: 0;
+
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+
+  color: var(--color-ink);
+
+  transition: color var(--dur-short) var(--ease-out);
+}
+
+.archive-card:hover h2 {
+  color: var(--color-graphite-ink);
+}
+
+.archive-card p {
+  margin: 18px 0 0;
+
+  font-size: 15px;
+  line-height: 1.62;
+
+  color: var(--color-ink-3);
+
+  transition: color var(--dur-short) var(--ease-out);
+}
+
+.archive-card:hover p {
+  color: var(--color-graphite-mut);
+}
+
+.workshop-list {
+  margin: 35px 0 0;
+  padding-left: 22px;
+}
+
+.workshop-list li {
+  margin-bottom: 15px;
+  padding-left: 4px;
+
+  color: var(--color-ink);
+}
+
+.workshop-list a {
+  color: var(--color-ink-2);
+
+  font-size: 16px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color var(--dur-short) var(--ease-out);
+}
+
+.workshop-list a:hover {
+  color: var(--color-accent-text);
+}
+
+.archive-card:hover .workshop-list li {
+  color: var(--color-graphite-ink);
+}
+
+.archive-card:hover .workshop-list a {
+  color: var(--color-graphite-mut);
+}
+
+.archive-card:hover .workshop-list a:hover {
+  color: var(--color-accent-bright);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .about-section,
+  .activities-section,
+  .organization-section {
+    padding: 96px 32px;
+  }
+
+  .activities-header,
+  .organization-header {
+    gap: 40px;
+  }
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 0 24px;
-  }
-
-  .logo-img {
-    height: 36px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
   .hero {
-    padding: 100px 24px;
+    min-height: 680px;
+    height: 84vh;
+  }
+
+  .hero-content {
+    padding: 148px 24px 64px;
   }
 
   .hero h1 {
-    letter-spacing: -2px;
+    font-size: clamp(44px, 13vw, 68px);
+    letter-spacing: -2.4px;
   }
 
-  .about-section {
-    padding: 100px 24px;
+  .about-section,
+  .activities-section,
+  .organization-section {
+    padding: 88px 24px;
   }
 
   .about-container {
@@ -832,21 +751,21 @@ body {
     gap: 50px;
   }
 
-  .about-title h2 {
-    font-size: 56px;
+  .about-title h2,
+  .activities-header h2,
+  .organization-header h2 {
+    letter-spacing: -1.8px;
   }
 
-  .activities-section {
-    padding: 100px 24px;
-  }
-
-  .activities-header {
+  .activities-header,
+  .organization-header {
     grid-template-columns: 1fr;
     gap: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
-  .activities-grid {
+  .activities-grid,
+  .organization-main {
     grid-template-columns: 1fr;
   }
 
@@ -855,33 +774,9 @@ body {
     padding: 30px;
   }
 
-  /* Organization */
-
-  .organization-section {
-    padding: 100px 24px;
-  }
-
-  .organization-header {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 60px;
-  }
-
-  .organization-header h2 {
-    font-size: 56px;
-  }
-
-  .organization-main {
-    grid-template-columns: 1fr;
-  }
-
   .organization-card {
     min-height: 160px;
   }
-
-  /* -----------------------------------------
-     Department mobile layout
-     ----------------------------------------- */
 
   .department-structure {
     margin-top: 60px;
@@ -895,9 +790,7 @@ body {
 
   .department-grid {
     grid-template-columns: 1fr;
-
     gap: 24px;
-
     margin-top: 0;
   }
 
@@ -923,54 +816,39 @@ body {
   }
 
   .subpage > .subpage-container {
-    padding: 110px 24px;
+    padding: 122px 24px 88px;
   }
 
   .subpage h1 {
-    font-size: 64px;
-    letter-spacing: -3px;
-  }
-
-  .subpage-intro {
-    font-size: 17px;
+    font-size: clamp(46px, 13vw, 68px);
+    letter-spacing: -2.5px;
   }
 
   .archive-grid {
     grid-template-columns: 1fr;
-
-    margin-top: 60px;
+    margin-top: 56px;
   }
 
   .archive-card {
     min-height: 320px;
-
     padding: 30px;
   }
 
   .archive-card h2 {
     font-size: 28px;
   }
+}
 
-  .department-structure {
-    margin-top: 50px;
-    padding-top: 50px;
+@media (max-width: 414px) {
+  .hero {
+    height: 88vh;
   }
 
-  .department-main-line {
-    height: 50px;
+  .hero-description {
+    font-size: 16px;
   }
 
-  .department-horizontal-line {
-    display: none;
-  }
-
-  .department-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .department-card::before {
-    top: -50px;
-    height: 50px;
+  .about-lead {
+    font-size: 21px;
   }
 }

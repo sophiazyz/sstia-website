@@ -1,38 +1,48 @@
-/* Innovation Events */
+/* Hallmark · genre: modern-minimal · macrostructure: Catalogue · theme: Cobalt
+ * design-system: design.md · designed-as-app · anchor hue: electric cobalt
+ */
 
-/* Unknown-year empty state */
+/* Empty state */
 
 .evt-empty {
   margin-top: 40px;
 
   font-size: 16px;
+  line-height: 1.6;
 
-  color: #555;
+  color: var(--color-ink-3);
 }
 
 .evt-empty a {
-  color: #111;
-
+  color: var(--color-accent-text);
   font-weight: 600;
+  text-decoration: none;
 }
 
-/* Year-card links on the index page (mirrors .workshop-list a) */
+.evt-empty a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* "View Events →" link on year cards (mirrors .workshop-list a) */
 
 .archive-card > a {
-  color: #111;
+  margin-top: auto;
+  padding-top: 28px;
 
-  font-size: 16px;
+  color: var(--color-accent-text);
+
+  font-size: 15px;
   font-weight: 600;
 
   text-decoration: none;
 
-  transition: opacity 0.2s ease;
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .archive-card > a:hover {
-  text-decoration: underline;
+  color: var(--color-accent-hover);
 }
 
 .archive-card:hover > a {
-  color: white;
+  color: var(--color-accent-bright);
 }

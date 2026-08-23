@@ -1,12 +1,16 @@
-/* =========================================
-   GC Science — Preview Grid
-   ========================================= */
+/* Hallmark · genre: modern-minimal · macrostructure: Catalogue + Long Document
+ * theme: Cobalt · design-system: design.md · designed-as-app · anchor hue: electric cobalt
+ */
+
+/* =========================================================
+   GC Science — preview grid
+   ========================================================= */
 
 .gcs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-  margin-top: 80px;
+  gap: 18px;
+  margin-top: 64px;
 }
 
 .gcs-card {
@@ -14,30 +18,29 @@
   flex-direction: column;
   overflow: hidden;
 
-  background: #ffffff;
-  border: 1px solid #dddddd;
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
 
-  color: #111111;
+  color: var(--color-ink);
   text-decoration: none;
 
   transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease;
+    background-color var(--dur-short) var(--ease-out),
+    border-color var(--dur-short) var(--ease-out),
+    transform var(--dur-short) var(--ease-out);
 }
 
 .gcs-card:hover {
-  transform: translateY(-8px);
-  background: #111111;
-  color: #ffffff;
+  background: var(--color-graphite);
+  border-color: var(--color-graphite);
+  transform: translateY(-4px);
 }
-
-/* Cover */
 
 .gcs-card-cover {
   aspect-ratio: 800 / 340;
   overflow: hidden;
-  background: #f0f0f0;
+  background: var(--color-paper-2);
 }
 
 .gcs-card-cover img {
@@ -45,77 +48,90 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  transition: transform 0.3s ease;
+  transition: transform var(--dur-med) var(--ease-out);
 }
 
 .gcs-card:hover .gcs-card-cover img {
   transform: scale(1.03);
 }
 
-/* Body */
-
 .gcs-card-body {
   display: flex;
   flex-direction: column;
   flex: 1;
 
-  padding: 30px;
+  padding: 28px;
 }
 
 .gcs-card-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   margin-bottom: 16px;
 
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 
-  color: #777777;
+  color: var(--color-accent-text);
 }
 
 .gcs-card:hover .gcs-card-date {
-  color: #aaaaaa;
+  color: var(--color-accent-bright);
 }
 
 .gcs-card-pin {
   display: inline-block;
-  margin-right: 10px;
   padding: 3px 9px;
 
-  border: 1px solid #111111;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
 
+  font-family: var(--font-mono);
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
 
-  color: #111111;
+  color: var(--color-accent-text);
 }
 
 .gcs-card:hover .gcs-card-pin {
-  border-color: #ffffff;
-  color: #ffffff;
+  color: var(--color-accent-bright);
 }
 
 .gcs-card-body h2 {
   margin: 0 0 14px;
 
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -0.5px;
+  line-height: 1.38;
+  letter-spacing: -0.4px;
+
+  color: var(--color-ink);
+
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .gcs-card-author {
   margin: 0;
 
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.58;
 
-  color: #666666;
+  color: var(--color-ink-3);
+
+  transition: color var(--dur-short) var(--ease-out);
+}
+
+.gcs-card:hover h2 {
+  color: var(--color-graphite-ink);
 }
 
 .gcs-card:hover .gcs-card-author {
-  color: #cccccc;
+  color: var(--color-graphite-mut);
 }
 
 .gcs-card-read {
@@ -124,26 +140,30 @@
 
   font-size: 14px;
   font-weight: 600;
+
+  color: var(--color-accent-text);
+
+  transition: color var(--dur-short) var(--ease-out);
 }
 
-/* =========================================
-   GC Science — Post Page
-   ========================================= */
+.gcs-card:hover .gcs-card-read {
+  color: var(--color-accent-bright);
+}
+
+/* =========================================================
+   Post page (shared by GC Science + Innovation Events)
+   ========================================================= */
 
 .gcs-post-page {
   min-height: 100vh;
-  background: #ffffff;
-  color: #111111;
+  background: var(--color-paper);
+  color: var(--color-ink);
 }
 
-/* =========================================
-   Post Header
-   ========================================= */
-
 .gcs-post-hero {
-  padding: 140px 60px 80px;
-  background: #f4f4f0;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 148px 24px 76px;
+  background: var(--color-paper-2);
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .gcs-post-hero-inner {
@@ -159,9 +179,9 @@
   margin: 0;
 
   font-size: clamp(34px, 5vw, 54px);
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: -1.5px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
 }
 
 .gcs-post-meta {
@@ -173,41 +193,35 @@
   margin-top: 24px;
 
   font-size: 14px;
-  color: #777777;
+  color: var(--color-ink-3);
 }
 
 .gcs-post-meta a {
-  color: #111111;
+  color: var(--color-ink);
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid #bbbbbb;
-
+  border-bottom: 1px solid var(--color-rule-strong);
   transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
+    color var(--dur-short) var(--ease-out),
+    border-color var(--dur-short) var(--ease-out);
 }
 
 .gcs-post-meta a:hover {
-  color: #555555;
-  border-color: #555555;
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
 }
-
-/* =========================================
-   Post Content
-   ========================================= */
 
 .gcs-post-body-wrap {
   padding: 70px 24px 90px;
 }
 
 .gcs-post-content {
-  /* Narrow column: posts are mostly an image flow, easier to read when short */
   max-width: 400px;
   margin: 0 auto;
 
   font-size: 16px;
-  line-height: 1.8;
-  color: #3e3e3e;
+  line-height: 1.72;
+  color: var(--color-ink-2);
 }
 
 .gcs-post-content img {
@@ -215,11 +229,14 @@
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+  border-radius: var(--radius-card);
 }
 
-/* =========================================
-   Post Reading Progress (side rails)
-   ========================================= */
+.gcs-post-content a {
+  color: var(--color-accent-text);
+}
+
+/* Reading progress (side rails) */
 
 .gcs-post-side {
   position: fixed;
@@ -238,16 +255,18 @@
 .gcs-post-side-label {
   writing-mode: vertical-rl;
 
+  font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: #aaaaaa;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
 }
 
 .gcs-post-side-line {
   width: 1px;
   height: 30vh;
-  background: #dddddd;
+  background: var(--color-rule);
 }
 
 .gcs-post-progress {
@@ -272,7 +291,7 @@
 
   overflow: hidden;
 
-  background: #e4e4e4;
+  background: var(--color-rule);
 }
 
 .gcs-post-progress-fill {
@@ -283,45 +302,44 @@
   width: 100%;
   height: 0;
 
-  background: #111111;
+  background: var(--color-accent);
 
   transition: height 0.15s ease-out;
 }
 
 .gcs-post-progress-count {
+  font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #999999;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-3);
 }
 
-/* =========================================
-   Back to GC Science
-   ========================================= */
+/* Back link */
 
 .gcs-post-back a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 
-  color: #111111;
+  color: var(--color-accent-text);
   text-decoration: none;
 
   font-size: 14px;
   font-weight: 600;
 
   transition:
-    gap 0.25s ease,
-    color 0.25s ease;
+    gap var(--dur-short) var(--ease-out),
+    color var(--dur-short) var(--ease-out);
 }
 
 .gcs-post-back a:hover {
   gap: 14px;
-  color: #666666;
+  color: var(--color-accent-hover);
 }
 
 .gcs-post-footer {
-  padding: 0 60px 80px;
+  padding: 0 24px 80px;
 }
 
 .gcs-post-footer .gcs-post-back {
@@ -329,24 +347,22 @@
   margin: 0 auto;
 }
 
-/* "Post Not Found" fallback */
-
 .gcs-post-back-block {
   margin-top: 40px;
 }
 
-/* =========================================
-   Mobile
-   ========================================= */
+/* =========================================================
+   Responsive
+   ========================================================= */
 
 @media (max-width: 768px) {
   .gcs-grid {
     grid-template-columns: 1fr;
-    margin-top: 60px;
+    margin-top: 56px;
   }
 
   .gcs-card-body {
-    padding: 26px;
+    padding: 24px;
   }
 
   .gcs-card-body h2 {
@@ -354,7 +370,7 @@
   }
 
   .gcs-post-hero {
-    padding: 110px 24px 60px;
+    padding: 122px 24px 60px;
   }
 
   .gcs-post-hero h1 {
@@ -372,5 +388,15 @@
   .gcs-post-side,
   .gcs-post-progress {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .gcs-grid {
+    margin-top: 48px;
+  }
+
+  .gcs-post-hero {
+    padding: 114px 20px 56px;
   }
 }

@@ -1,8 +1,225 @@
+@import "../tokens.css";
+
+* {
+  box-sizing: border-box;
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  /* Compatibility aliases — legacy colour names → Cobalt tokens */
+  --ink: var(--color-ink);
+  --ink-muted: var(--color-ink-3);
+  --blue: var(--color-accent);
+  --blue-dark: var(--color-accent-hover);
+  --canvas: var(--color-paper);
+  --parchment: var(--color-paper-2);
+  --dark: var(--color-graphite);
+  --dark-soft: var(--color-graphite-2);
+  --line: var(--color-rule);
+  --black: var(--color-ink);
+  --grey-light: var(--color-ink-3);
+  --grey-mid: var(--color-ink-3);
+  --grey-dark: var(--color-ink-2);
+  --tag-bg: var(--color-accent-soft);
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
 }
 
 body {
   min-width: 320px;
+  overflow-x: clip;
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-family: var(--font-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+a {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+/* =========================================================
+   Shared shell — Navbar (bordered, blur-on-scroll)
+   ========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 clamp(20px, 5vw, 56px);
+
+  background: var(--color-paper-translucent);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--color-rule);
+
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.5vw, 32px);
+}
+
+.nav-links a {
+  position: relative;
+
+  color: var(--color-ink-2);
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+
+  transition: color var(--dur-short) var(--ease-out);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 1px;
+
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform var(--dur-short) var(--ease-out);
+}
+
+.nav-links a:hover {
+  color: var(--color-ink);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   Shared shell — mono section label (eyebrow + cobalt tick)
+   ========================================================= */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 0 22px;
+
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--color-accent-text);
+}
+
+.section-label::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--color-accent);
+  flex: none;
+}
+
+/* =========================================================
+   Shared shell — subpage intro paragraph
+   ========================================================= */
+
+.subpage-intro {
+  max-width: 650px;
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.58;
+  letter-spacing: -0.2px;
+
+  color: var(--color-ink-3);
+}
+
+/* =========================================================
+   Responsive + reduced motion
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 24px;
+  }
+
+  .logo-img {
+    height: 34px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

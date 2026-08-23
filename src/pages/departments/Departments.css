@@ -1,250 +1,191 @@
-
+/* Hallmark · genre: modern-minimal · macrostructure: Catalogue · theme: Cobalt
+ * design-system: design.md · designed-as-app · anchor hue: electric cobalt
+ */
 
 .publicity-page {
-  background-color: #f3f4f6;
-  color: var(--black);
   min-height: 100vh;
-  font-family: 'Inter', sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
 }
 
 .publicity-container {
-  max-width: 1100px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 100px 40px;
+  padding: 148px 40px 104px;
 }
 
-/* Header */
+/* =========================================================
+   Page header
+   ========================================================= */
+
 .page-header {
-  margin-bottom: 60px;
-}
-
-.section-label {
-  color: var(--grey-light);
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  font-size: 0.75rem;
-  margin-bottom: 8px;
+  margin-bottom: 64px;
 }
 
 .main-title {
-  font-size: 3rem;
-  font-weight: 800;
   margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -2.2px;
+
+  color: var(--color-ink);
 }
 
 .cn-title {
+  font-family: var(--font-body);
   font-weight: 400;
-  color: var(--grey-mid);
+  color: var(--color-ink-3);
+  letter-spacing: -0.2px;
 }
 
-.subpage-intro {
-  font-size: 1.1rem;
-  color: var(--grey-dark);
-  max-width: 600px;
-  margin-top: 15px;
+.page-header .subpage-intro {
+  margin-top: 20px;
 }
 
-/* Grid & Cards */
+/* =========================================================
+   Cards
+   ========================================================= */
+
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1px;
+
+  background: var(--color-rule);
+  border: 1px solid var(--color-rule);
 }
 
 .info-card {
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb; 
+  min-height: 320px;
   padding: 40px;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  transition: all 0.3s ease;
-  min-height: 320px; 
+  justify-content: space-between;
+
+  background: var(--color-paper);
+
+  transition:
+    background-color var(--dur-short) var(--ease-out),
+    transform var(--dur-short) var(--ease-out);
 }
 
 .info-card:hover {
-  border-color: var(--black);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  background: var(--color-graphite);
+  transform: translateY(-4px);
 }
 
 .category-tag {
-  background-color: var(--tag-bg);
-  color: var(--grey-mid);
-  padding: 4px 10px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-radius: 4px;
   display: inline-block;
   margin-bottom: 20px;
+  padding: 4px 10px;
+
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  border-radius: 4px;
 }
 
 .info-card h3 {
+  margin: 0 0 20px;
+
   font-size: 1.75rem;
-  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+
+  color: var(--color-ink);
+
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .info-card p {
-  color: var(--grey-dark);
+  margin: 0 0 30px;
+
+  font-size: 15px;
   line-height: 1.7;
-  margin-bottom: 30px;
+
+  color: var(--color-ink-3);
+
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .learn-more {
-  text-decoration: none;
-  color: var(--black);
-  font-weight: 700;
-  font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: gap 0.2s;
+
+  color: var(--color-accent-text);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .learn-more span {
-  transition: transform 0.2s;
+  transition: transform var(--dur-short) var(--ease-out);
 }
 
 .learn-more:hover {
-  color: var(--grey-mid);
+  color: var(--color-accent-hover);
 }
 
 .learn-more:hover span {
   transform: translateX(5px);
 }
 
-/* Footer */
+.info-card:hover h3 {
+  color: var(--color-graphite-ink);
+}
+
+.info-card:hover p {
+  color: var(--color-graphite-mut);
+}
+
+.info-card:hover .category-tag {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-bright);
+}
+
+.info-card:hover .learn-more {
+  color: var(--color-accent-bright);
+}
+
+/* =========================================================
+   Footer / back link
+   ========================================================= */
+
 .page-footer {
-  margin-top: 60px;
+  margin-top: 64px;
   padding-top: 30px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-rule);
 }
 
 .back-home {
+  color: var(--color-ink-3);
   text-decoration: none;
-  color: var(--grey-mid);
   font-size: 0.9rem;
   font-weight: 500;
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .back-home:hover {
-  color: var(--black);
+  color: var(--color-ink);
 }
 
-/* Tablet */
-@media (max-width: 900px) {
-  .publicity-container {
-    padding: 80px 30px;
-  }
-
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .info-card {
-    min-height: auto;
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .publicity-container {
-    padding: 60px 20px;
-  }
-
-  .page-header {
-    margin-bottom: 40px;
-  }
-
-  .section-label {
-    font-size: 0.7rem;
-    margin-bottom: 6px;
-  }
-
-  .main-title {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  .cn-title {
-    display: block;
-    margin-top: 4px;
-  }
-
-  .subpage-intro {
-    font-size: 1rem;
-    margin-top: 12px;
-  }
-
-  .content-grid {
-    gap: 20px;
-  }
-
-  .info-card {
-    padding: 28px 24px;
-    min-height: auto;
-  }
-
-  .category-tag {
-    font-size: 0.65rem;
-    padding: 3px 8px;
-    margin-bottom: 16px;
-  }
-
-  .info-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
-  }
-
-  .info-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 24px;
-  }
-
-  .learn-more {
-    font-size: 0.85rem;
-  }
-
-  .page-footer {
-    margin-top: 40px;
-    padding-top: 24px;
-  }
-
-  .back-home {
-    font-size: 0.85rem;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 380px) {
-  .publicity-container {
-    padding: 50px 16px;
-  }
-
-  .main-title {
-    font-size: 1.75rem;
-  }
-
-  .subpage-intro {
-    font-size: 0.95rem;
-  }
-
-  .info-card {
-    padding: 24px 20px;
-  }
-
-  .info-card h3 {
-    font-size: 1.35rem;
-  }
-
-  .info-card p {
-    font-size: 0.9rem;
-  }
-}
-
-/* ── Merchandise Page ── */
+/* =========================================================
+   Merchandise grid
+   ========================================================= */
 
 .merch-grid {
   display: grid;
@@ -262,35 +203,44 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-rule);
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform var(--dur-short) var(--ease-out),
+    border-color var(--dur-short) var(--ease-out);
 }
 
 .merch-image:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-accent);
 }
 
 .merch-caption {
-  margin-top: 10px;
+  margin-top: 12px;
+
   font-size: 0.85rem;
-  color: var(--grey-dark);
-  text-align: center;
   font-weight: 500;
+  letter-spacing: -0.1px;
+
+  color: var(--color-ink-3);
+  text-align: center;
 }
 
-/* Lightbox */
+/* =========================================================
+   Lightbox
+   ========================================================= */
+
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: color-mix(in oklab, var(--color-graphite) 88%, transparent);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
   cursor: pointer;
-  animation: fadeIn 0.2s ease;
+  animation: fadeIn var(--dur-short) var(--ease-out);
 }
 
 @keyframes fadeIn {
@@ -309,7 +259,7 @@
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: var(--radius-card);
 }
 
 .lightbox-close {
@@ -318,33 +268,86 @@
   right: -12px;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: var(--radius-card);
   border: none;
-  background: #fff;
-  color: #333;
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: background 0.2s;
+  transition: background var(--dur-short) var(--ease-out);
 }
 
 .lightbox-close:hover {
-  background: #eee;
+  background: var(--color-accent-hover);
 }
 
-/* Merchandise – Tablet */
+/* =========================================================
+   Responsive
+   ========================================================= */
+
 @media (max-width: 900px) {
+  .publicity-container {
+    padding: 120px 30px 80px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    min-height: auto;
+  }
+
   .merch-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
-/* Merchandise – Mobile */
 @media (max-width: 600px) {
+  .publicity-container {
+    padding: 110px 20px 64px;
+  }
+
+  .page-header {
+    margin-bottom: 44px;
+  }
+
+  .main-title {
+    font-size: 2rem;
+    line-height: 1.16;
+    letter-spacing: -1.4px;
+  }
+
+  .cn-title {
+    display: block;
+    margin-top: 6px;
+  }
+
+  .page-header .subpage-intro {
+    margin-top: 14px;
+    font-size: 1rem;
+  }
+
+  .info-card {
+    padding: 28px 24px;
+  }
+
+  .info-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .info-card p {
+    font-size: 0.95rem;
+  }
+
+  .learn-more {
+    font-size: 0.85rem;
+  }
+
   .merch-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -352,5 +355,9 @@
 
   .merch-caption {
     font-size: 0.8rem;
+  }
+
+  .page-footer {
+    margin-top: 44px;
   }
 }
