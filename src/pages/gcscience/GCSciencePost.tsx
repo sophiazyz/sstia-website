@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import "../../App.css";
 import "./gcscience.css";
@@ -66,9 +66,6 @@ function GCSciencePost() {
               The post you are looking for does not exist.
             </p>
 
-            <div className="gcs-post-back gcs-post-back-block">
-              <Link to="/activities/gc-science">← Back to GC Science</Link>
-            </div>
           </div>
         </main>
       </div>
@@ -106,10 +103,6 @@ function GCSciencePost() {
 
         <header className="gcs-post-hero">
           <div className="gcs-post-hero-inner">
-            <div className="gcs-post-back">
-              <Link to="/activities/gc-science">← Back to GC Science</Link>
-            </div>
-
             <p className="section-label">GC SCIENCE</p>
 
             <h1>{post.title}</h1>
@@ -155,11 +148,6 @@ function GCSciencePost() {
         {/* Back */}
         {/* ============================= */}
 
-        <div className="gcs-post-footer">
-          <div className="gcs-post-back">
-            <Link to="/activities/gc-science">← Back to GC Science</Link>
-          </div>
-        </div>
       </main>
     </div>
   );

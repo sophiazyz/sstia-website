@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import "./Departments.css";
 
@@ -67,12 +66,6 @@ function Merchandise() {
           ))}
         </section>
 
-        {/* Back Link */}
-        <footer className="page-footer">
-          <Link to="/departments/publicity" className="back-home">
-            ← Back to Publicity
-          </Link>
-        </footer>
       </main>
 
       {/* Lightbox Modal */}

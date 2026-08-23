@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import "../../App.css";
 import "../gcscience/gcscience.css";
@@ -67,9 +67,6 @@ function EventPost() {
               The event you are looking for does not exist.
             </p>
 
-            <div className="gcs-post-back gcs-post-back-block">
-              <Link to="/activities/events">← Back to Innovation Events</Link>
-            </div>
           </div>
         </main>
       </div>
@@ -107,12 +104,6 @@ function EventPost() {
 
         <header className="gcs-post-hero">
           <div className="gcs-post-hero-inner">
-            <div className="gcs-post-back">
-              <Link to={`/activities/events/${year}`}>
-                ← Back to {year} Events
-              </Link>
-            </div>
-
             <p className="section-label">INNOVATION EVENTS</p>
 
             <h1>{post.title}</h1>
@@ -158,13 +149,6 @@ function EventPost() {
         {/* Back */}
         {/* ============================= */}
 
-        <div className="gcs-post-footer">
-          <div className="gcs-post-back">
-            <Link to={`/activities/events/${year}`}>
-              ← Back to {year} Events
-            </Link>
-          </div>
-        </div>
       </main>
     </div>
   );

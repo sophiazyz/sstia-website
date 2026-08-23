@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Navbar from "../../../components/Navbar";
 import "../../../App.css";
 import "../Workshops.css";
@@ -126,9 +125,6 @@ function Solidworks() {
             {/* Back */}
             {/* ============================= */}
 
-            <div className="workshop-back">
-              <Link to="/activities/workshops">← Back to Workshops</Link>
-            </div>
           </div>
         </section>
       </main>

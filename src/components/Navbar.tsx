@@ -11,6 +11,23 @@ function Navbar() {
 
   const isHome = location.pathname === "/";
 
+  const getReturn = () => {
+    const path = location.pathname;
+    const eventMatch = path.match(/^\/activities\/events\/([^/]+)(?:\/[^/]+)?$/);
+
+    if (path === "/merchandise") return { to: "/departments/publicity", label: "Back to Publicity" };
+    if (/^\/activities\/workshops\/\d+\/[^/]+$/.test(path)) return { to: "/activities/workshops", label: "Back to Workshops" };
+    if (eventMatch) {
+      return eventMatch[0].split("/").length > 4
+        ? { to: `/activities/events/${eventMatch[1]}`, label: `Back to ${eventMatch[1]} Events` }
+        : { to: "/activities/events", label: "Back to Innovation Events" };
+    }
+    if (/^\/activities\/gc-science\/[^/]+$/.test(path)) return { to: "/activities/gc-science", label: "Back to GC Science" };
+    return { to: "/", label: "Back to Home" };
+  };
+
+  const returnTarget = getReturn();
+
   useEffect(() => {
     if (!isHome) {
       setLightMode(false);
@@ -59,7 +76,7 @@ function Navbar() {
         {isHome ? <a href="#home">Home</a> : <Link to="/#home">Home</Link>}
 
         {/* About */}
-        {isHome ? <a href="#about">About</a> : <Link to="/#about">About</Link>}
+        {isHome ? <a href="#about">About us</a> : <Link to="/#about">About us</Link>}
 
         {/* Activities */}
         {isHome ? (
@@ -78,6 +95,12 @@ function Navbar() {
           <Link to="/#members">Our Organization</Link>
         )}
       </div>
+
+      {!isHome && (
+        <Link to={returnTarget.to} className="subpage-home-link">
+          ← {returnTarget.label}
+        </Link>
+      )}
     </nav>
   );
 }

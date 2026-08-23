@@ -4,7 +4,7 @@
 
 .workshop-page {
   min-height: 100vh;
-  background: var(--color-paper);
+  background: var(--color-paper-2);
   color: var(--color-ink);
 }
 

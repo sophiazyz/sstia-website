@@ -52,12 +52,6 @@ function Publicity() {
           </div>
         </section>
 
-        {/* Back Link */}
-        <footer className="page-footer">
-          <Link to="/" className="back-home">
-            ← Back to Home
-          </Link>
-        </footer>
       </main>
     </div>
   );

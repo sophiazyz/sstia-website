@@ -27,10 +27,6 @@ function YearEvents() {
 
           {events.length > 0 ? (
             <>
-              <div className="gcs-post-back">
-                <Link to="/activities/events">← Back to Innovation Events</Link>
-              </div>
-
               <div className="gcs-grid">
                 {events.map((post) => (
                   <Link
@@ -62,9 +58,7 @@ function YearEvents() {
               </div>
             </>
           ) : (
-            <div className="evt-empty">
-              <Link to="/activities/events">← Back to Innovation Events</Link>
-            </div>
+            <div className="evt-empty">No events found.</div>
           )}
         </div>
       </main>
