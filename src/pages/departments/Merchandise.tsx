@@ -10,6 +10,14 @@ import img5 from "./pictures/5.jpg";
 import img6 from "./pictures/6.jpg";
 import img7 from "./pictures/7.jpg";
 import img8 from "./pictures/8.jpg";
+import img9 from "./pictures/9.jpg";
+import img10 from "./pictures/10.jpg";
+import img11 from "./pictures/11.jpg";
+import img12 from "./pictures/12.jpg";
+import img13 from "./pictures/13.jpg";
+import img14 from "./pictures/14.jpg";
+import img15 from "./pictures/15.jpg";
+
 
 interface MerchItem {
   src: string;
@@ -26,6 +34,13 @@ const merchItems: MerchItem[] = [
   { src: img6, alt: "Merchandise 6", description: "SSTIA Moon-shaped Fan" },
   { src: img7, alt: "Merchandise 7", description: "Myf's Handmade Booklet" },
   { src: img8, alt: "Merchandise 8", description: "Freshman Welcome Gifts" },
+  { src: img9, alt: "Merchandise 9", description: "SSTIA Cap" },
+  { src: img15, alt: "Merchandise 15", description: "SSTIA Memes" },
+  { src: img10, alt: "Merchandise 10", description: "SSTIA Mouse Pad" },
+  { src: img11, alt: "Merchandise 11", description: "Liming \"Cup\"" },
+  { src: img12, alt: "Merchandise 12", description: "SSTIA PCB Keyring" },
+  { src: img13, alt: "Merchandise 13", description: "SSTIA Mascot Pillow" },
+  { src: img14, alt: "Merchandise 14", description: "Freshman Welcome Gifts" },
 ];
 
 function Merchandise() {
