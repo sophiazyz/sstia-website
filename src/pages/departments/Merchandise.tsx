@@ -32,7 +32,7 @@ const merchItems: MerchItem[] = [
   { src: img4, alt: "Merchandise 4", description: "Freshman Fun Survey" },
   { src: img5, alt: "Merchandise 5", description: "Freshman Welcome Gifts" },
   { src: img6, alt: "Merchandise 6", description: "SSTIA Moon-shaped Fan" },
-  { src: img7, alt: "Merchandise 7", description: "Myf's Handmade Booklet" },
+  { src: img7, alt: "Merchandise 7", description: "Handmade Booklet" },
   { src: img8, alt: "Merchandise 8", description: "Freshman Welcome Gifts" },
   { src: img9, alt: "Merchandise 9", description: "SSTIA Cap" },
   { src: img15, alt: "Merchandise 15", description: "SSTIA Memes" },
@@ -40,7 +40,7 @@ const merchItems: MerchItem[] = [
   { src: img11, alt: "Merchandise 11", description: "Liming \"Cup\"" },
   { src: img12, alt: "Merchandise 12", description: "SSTIA PCB Keyring" },
   { src: img13, alt: "Merchandise 13", description: "SSTIA Mascot Pillow" },
-  { src: img14, alt: "Merchandise 14", description: "Freshman Welcome Gifts" },
+  { src: img14, alt: "Merchandise 14", description: " SSTIA Electric Fan" },
 ];
 
 function Merchandise() {
