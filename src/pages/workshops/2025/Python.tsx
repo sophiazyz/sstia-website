@@ -13,7 +13,7 @@ function Python() {
 
         <section className="workshop-hero">
           <div className="workshop-container">
-            <p className="section-label">WORKSHOPS / 2025</p>
+            <p className="section-label">WORKSHOPS / 2026</p>
 
             <h1>Python</h1>
 

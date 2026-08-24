@@ -47,11 +47,13 @@ function Navbar() {
       setSurface(
         currentId === "home"
           ? "hero"
-          : currentId === "activities"
+          : currentId === "about"
             ? "parchment"
-            : currentId === "members"
-              ? "graphite"
-              : "paper",
+            : currentId === "activities"
+              ? "paper"
+              : currentId === "members"
+                ? "graphite"
+                : "paper",
       );
     };
 
