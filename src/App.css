@@ -16,10 +16,23 @@
   min-height: 720px;
   height: min(84vh, 820px);
 
-  background-image: url("./assets/hero.png");
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+
   background-size: cover;
   background-position: center 42%;
   background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero-slide--active {
+  opacity: 1;
 }
 
 .hero::after {
@@ -33,6 +46,8 @@
     color-mix(in oklab, var(--color-graphite) 28%, transparent) 55%,
     transparent 100%
   );
+
+  z-index: 1;
 }
 
 .hero-content {

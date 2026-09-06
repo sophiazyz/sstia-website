@@ -1,8 +1,28 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../App.css";
 
+import hero1 from "../assets/hero1.jpg";
+import hero2 from "../assets/hero2.jpg";
+import hero3 from "../assets/hero3.jpg";
+import hero4 from "../assets/hero4.jpg";
+import hero5 from "../assets/hero5.jpg";
+import hero6 from "../assets/hero6.jpg";
+
+const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6];
+const SLIDE_INTERVAL = 5000;
+
 function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, SLIDE_INTERVAL);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="website">
       <Navbar />
@@ -13,6 +33,13 @@ function Home() {
         {/* ============================= */}
 
         <section id="home" className="hero">
+          {heroImages.map((src, index) => (
+            <div
+              key={index}
+              className={`hero-slide ${index === currentSlide ? "hero-slide--active" : ""}`}
+              style={{ backgroundImage: `url(${src})` }}
+            />
+          ))}
           <div className="hero-content">
             <p className="hero-small-title">
               Student Science Technology Innovation Association
