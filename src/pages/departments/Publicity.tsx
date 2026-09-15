@@ -11,7 +11,7 @@ function Publicity() {
         {/* Header Section */}
         <header className="page-header">
           <p className="section-label">DEPARTMENTS</p>
-          <h1 className="main-title">Publicity <span className="cn-title">· 宣传部</span></h1>
+          <h1 className="main-title">Publicity <span className="cn-title"></span></h1>
           <p className="subpage-intro">
             Elevating SSTIA's brand through creative design and strategic digital communication.
           </p>

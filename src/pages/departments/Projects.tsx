@@ -11,7 +11,7 @@ function Projects() {
         {/* Header Section */}
         <header className="page-header">
           <p className="section-label">DEPARTMENTS</p>
-          <h1 className="main-title">Projects <span className="cn-title">· 项目部</span></h1>
+          <h1 className="main-title">Projects <span className="cn-title"></span></h1>
           <p className="subpage-intro">
             Bridging knowledge and experience through publishing and mentorship.
           </p>

@@ -11,7 +11,7 @@ function Competition() {
         {/* Header Section */}
         <header className="page-header">
           <p className="section-label">DEPARTMENTS</p>
-          <h1 className="main-title">Competition <span className="cn-title">· 竞赛部</span></h1>
+          <h1 className="main-title">Competition <span className="cn-title"></span></h1>
           <p className="subpage-intro">
             Empowering students through hands-on workshops and comprehensive competition resources.
           </p>

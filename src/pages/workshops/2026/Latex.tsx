@@ -45,11 +45,11 @@ function Latex() {
               </div>
 
               <div className="workshop-description">
-                <p>Time: 2026.9.19 </p>
+                <p>Time: 2026.9.19 15:00-17:00</p>
 
-                <p>Location: TBD</p>
+                <p>Location: SY 100</p>
 
-                <p>Bring: Computer.</p>
+                <p>Bring: Computer with VS code.</p>
               </div>
             </div>
 
@@ -85,16 +85,22 @@ function Latex() {
                     Learning how to typeset mathematical equations, insert
                     figures, tables and cross-references.
                   </p>
+
+                  <p>
+                    Introduction to powerful tools helping you typeset your documents.
+                  </p>
                 </article>
 
                 <article className="topic-card">
                   <span>03</span>
 
-                  <h3>Academic Writing</h3>
+                  <h3>Beamer Slides &amp; Typesetting Alternatives</h3>
 
                   <p>
-                    Creating professional academic documents such as reports,
-                    presentations and posters using LaTeX templates.
+                    Creating slides with the Beamer document class in LaTeX, which allows for convenient formatting of formulas, code, graphics, and references.
+                  </p>
+                  <p>
+                    Introduction to the usage and differences between Markdown and Typst.
                   </p>
                 </article>
               </div>
@@ -120,7 +126,7 @@ function Latex() {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://github.com/UMJI-SSTIA/LaTeX-Workshop-2026"
                   className="material-link"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -58,7 +58,7 @@ function Merchandise() {
         <header className="page-header">
           <p className="section-label">DEPARTMENTS</p>
           <h1 className="main-title">
-            SSTIA Merchandise <span className="cn-title">· 周边产品</span>
+            SSTIA Merchandise <span className="cn-title"></span>
           </h1>
           <p className="subpage-intro">
             Explore our collection of SSTIA-branded merchandise, designed and

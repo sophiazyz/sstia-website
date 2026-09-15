@@ -207,7 +207,7 @@ function Home() {
 
                   <div>
                     <h3>Presidium</h3>
-                    <p>主席团</p>
+                    <p></p>
                   </div>
                 </div>
 
@@ -218,7 +218,7 @@ function Home() {
 
                   <div>
                     <h3>Department Heads</h3>
-                    <p>部长团</p>
+                    <p></p>
                   </div>
                 </div>
 
@@ -229,7 +229,7 @@ function Home() {
 
                   <div>
                     <h3>Advisory Board</h3>
-                    <p>顾问团</p>
+                    <p></p>
                   </div>
                 </div>
               </div>
@@ -253,7 +253,7 @@ function Home() {
 
                     <div>
                       <h3>Competition</h3>
-                      <p>竞赛部</p>
+                      <p></p>
                     </div>
 
                     <div className="department-line"></div>
@@ -272,7 +272,7 @@ function Home() {
 
                     <div>
                       <h3>Projects</h3>
-                      <p>项目部</p>
+                      <p></p>
                     </div>
 
                     <div className="department-line"></div>
@@ -291,7 +291,7 @@ function Home() {
 
                     <div>
                       <h3>Publicity</h3>
-                      <p>宣传部</p>
+                      <p></p>
                     </div>
 
                     <div className="department-line"></div>
