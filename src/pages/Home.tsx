@@ -2,15 +2,22 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../App.css";
-
+/*
 import hero1 from "../assets/hero1.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
 import hero4 from "../assets/hero4.jpg";
 import hero5 from "../assets/hero5.jpg";
 import hero6 from "../assets/hero6.jpg";
+*/
+import img1 from "../assets/1.jpg";
+import img2 from "../assets/2.jpg";
+import img3 from "../assets/3.jpg";
+import img4 from "../assets/4.jpg";
+import img5 from "../assets/5.jpg";
+import img6 from "../assets/6.jpg";
 
-const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6];
+const heroImages = [img1, img2, img3, img4, img5, img6];
 const SLIDE_INTERVAL = 5000;
 
 function Home() {
