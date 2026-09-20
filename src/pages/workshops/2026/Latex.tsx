@@ -115,7 +115,7 @@ function Latex() {
 
               <div className="materials-list">
                 <a
-                  href="#"
+                  href="https://sjtu.feishu.cn/minutes/obcn41b35ztb8avbbzwh9d65"
                   className="material-link"
                   target="_blank"
                   rel="noopener noreferrer"
