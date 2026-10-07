@@ -419,49 +419,24 @@ def build_index_html(article: dict) -> str:
     if '</div>' in content_html:
         content_html = content_html.rsplit('</div>', 1)[0]
 
-    # 3. 处理图片: 替换远程 URL 或为无 src 的图片添加本地路径
-    img_index = 0
-    for i, url in enumerate(article["imageUrls"], 1):
-        ext = guess_ext(url)
-        local_name = f"img-{i}.{ext}"
-        local_path = f"images/{local_name}"
-        
-        # 替换 data-src 为 src
-        content_html = content_html.replace(
-            f'data-src="{url}"',
-            f'src="{local_path}"'
-        )
-        # 替换已有的 src
-        content_html = content_html.replace(
-            f'src="{url}"',
-            f'src="{local_path}"'
-        )
-    
-    # 4. 处理没有 src 属性的图片 (微信懒加载)
-    # 按顺序为它们分配本地图片路径
-    def add_img_src(match):
-        nonlocal img_index
-        img_index += 1
-        if img_index <= len(article["imageUrls"]):
-            ext = guess_ext(article["imageUrls"][img_index - 1])
-            tag = match.group(0)
-            # 处理自闭合标签 <img ... /> 和普通标签 <img ... >
-            if tag.endswith('/>'):
-                return tag[:-2].rstrip() + f' src="images/img-{img_index}.{ext}"/>'
-            elif tag.endswith('>'):
-                return tag[:-1].rstrip() + f' src="images/img-{img_index}.{ext}">'
-            return tag
-        return match.group(0)
-    
-    # 匹配没有 src 的 img 标签
-    content_html = re.sub(
-        r'<img(?![^>]*\bsrc=)[^>]*>',
-        add_img_src,
-        content_html
-    )
+    # 3. 处理图片: 按正文图片顺序替换为本地路径
+    # 使用 BeautifulSoup 处理图片标签，避免依赖原始 HTML 的属性顺序。
+    content_soup = BeautifulSoup(content_html, "html.parser")
+    content_images = content_soup.find_all("img")
 
-    # 5. 清理残留的 data-src 属性
-    content_html = re.sub(r'\s+data-src="[^"]*"', '', content_html)
+    for image_index, image in enumerate(content_images, 1):
+        if image_index > len(article["imageUrls"]):
+            continue
+
+        image_url = article["imageUrls"][image_index - 1]
+        ext = guess_ext(image_url)
+        local_path = f"images/img-{image_index}.{ext}"
+
+        image["src"] = local_path
+        image.attrs.pop("data-src", None)
+        image.attrs.pop("data-original", None)
+
+    content_html = str(content_soup)
 
     html = (
         "<!doctype html>\n"

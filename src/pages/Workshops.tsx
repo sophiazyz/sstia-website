@@ -32,6 +32,12 @@ function Workshops() {
                     LaTeX
                   </Link>
                 </li>
+
+                <li>
+                  <Link to="/activities/workshops/2026/upc">
+                    UPC
+                  </Link>
+                </li>
               </ul>
             </article>
 

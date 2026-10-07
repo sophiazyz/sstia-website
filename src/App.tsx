@@ -7,6 +7,7 @@ import Python from "./pages/workshops/2025/Python";
 import DeepLearning from "./pages/workshops/2025/DeepLearning";
 import Latex from "./pages/workshops/2025/Latex";
 import Latex2026 from "./pages/workshops/2026/Latex";
+import UPC2026 from "./pages/workshops/2026/UPC";
 import Solidworks from "./pages/workshops/2025/Solidworks";
 import UPC from "./pages/workshops/2025/UPC";
 import LimingCupSampleCar from "./pages/workshops/2025/LimingCupSampleCar";
@@ -46,6 +47,7 @@ function App() {
         />
         <Route path="/activities/workshops/2025/latex" element={<Latex />} />
         <Route path="/activities/workshops/2026/latex" element={<Latex2026 />} />
+        <Route path="/activities/workshops/2026/upc" element={<UPC2026 />} />
         <Route path="/activities/workshops/2025/solidworks" element={<Solidworks />} />
         <Route path="/activities/workshops/2025/upc" element={<UPC />} />
         <Route
