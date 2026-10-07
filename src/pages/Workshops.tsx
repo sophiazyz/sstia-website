@@ -38,6 +38,11 @@ function Workshops() {
                     UPC
                   </Link>
                 </li>
+                <li>
+                  <Link to="/activities/workshops/2026/solidworks">
+                    SolidWorks
+                  </Link>
+                </li>
               </ul>
             </article>
 

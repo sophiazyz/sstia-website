@@ -1,7 +1,7 @@
 import Navbar from "../../../components/Navbar";
 import "../../../App.css";
 import "../Workshops.css";
-function UPC() {
+function Solidworks() {
   return (
     <div className="website">
       <Navbar />
@@ -15,11 +15,11 @@ function UPC() {
           <div className="workshop-container">
             <p className="section-label">WORKSHOPS / 2026</p>
 
-            <h1>UPC</h1>
+            <h1>SolidWorks</h1>
 
             <p className="workshop-intro">
-              International University Physics Competition preparation,
-              inviting professor and gold medalist to share insights.
+              A hands-on SolidWorks workshop designed to introduce students to
+              3D modeling, assembly design and engineering drawing.
             </p>
           </div>
         </section>
@@ -35,22 +35,26 @@ function UPC() {
                 <p className="section-label">ABOUT THE WORKSHOP</p>
 
                 <h2>
-                  UPC.
+                  SolidWorks.
                   <br />
-                  Explore.
+                  Design.
                   <br />
-                  Compete.
+                  Build.
                 </h2>
               </div>
 
               <div className="workshop-description">
-                <p>Time: 2026.10.09 18:20-19:40</p>
+                <p>Time: 2026.10.25 </p>
 
-                <p>Location: DSY 100</p>
+                <p>Location: TBD</p>
 
-                <p>Bring: Interest in physics.</p>
+                <p>Bring: Computer with SolidWorks and Bambu Studio installed.</p>
               </div>
             </div>
+
+            {/* ============================= */}
+            {/* Topics */}
+            {/* ============================= */}
 
             <div className="workshop-topics">
               <p className="section-label">WHAT WE COVERED</p>
@@ -59,35 +63,37 @@ function UPC() {
                 <article className="topic-card">
                   <span>01</span>
 
-                  <h3>Part I — Physics Talk</h3>
+                  <h3>Part Modeling</h3>
 
                   <p>
-                    Invite Zijie Qu to talk about the physics fundamentals
-                    relevant to the University Physics Competition.
+                    Introduction to sketching, extrusion, revolution and other
+                    fundamental feature creation tools.
+                  </p>
+
+                  <p>
+                    Understanding design intent, constraints and parametric
+                    modeling concepts.
                   </p>
                 </article>
 
                 <article className="topic-card">
                   <span>02</span>
 
-                  <h3>Part II — UPC Experience</h3>
+                  <h3>Assembly Design</h3>
 
                   <p>
-                    Invite Golden Metal Team to share their UPC experience,
-                    including problem-solving strategies and teamwork insights.
+                    Learning how to create assemblies, apply mates and
+                    validate mechanical interactions between components.
                   </p>
                 </article>
 
                 <article className="topic-card">
                   <span>03</span>
 
-                  <h3>ABOUT UPC</h3>
+                  <h3>Hands-on Modeling</h3>
 
                   <p>
-                    The University Physics Competition (UPC) is an international
-                    physics competition that challenges students to apply physics
-                    principles to solve real-world problems through teamwork and
-                    innovation.
+                    Live instructor-led modeling from scratch. Create parts, assemblies, and drawings together in SolidWorks - no prior experience needed.
                   </p>
                 </article>
               </div>
@@ -112,7 +118,7 @@ function UPC() {
                   <span>↗</span>
                 </a>
                 <a
-                  href="https://github.com/UMJI-SSTIA/UPC-Workshop-26"
+                  href="https://github.com/UMJI-SSTIA/Solidworks-Workshop-26"
                   className="material-link"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -121,7 +127,6 @@ function UPC() {
 
                   <span>↗</span>
                 </a>
-
 
               </div>
             </div>
@@ -137,4 +142,4 @@ function UPC() {
   );
 }
 
-export default UPC;
+export default Solidworks;
