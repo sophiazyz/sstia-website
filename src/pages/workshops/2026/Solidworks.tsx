@@ -44,11 +44,11 @@ function Solidworks() {
               </div>
 
               <div className="workshop-description">
-                <p>Time: 2026.10.25 </p>
+                <p>Time: 2026.10.25 14:00 - 16:00</p>
 
-                <p>Location: TBD</p>
+                <p>Location: DSY 115</p>
 
-                <p>Bring: Computer with SolidWorks and Bambu Studio installed.</p>
+                <p>Bring: Mouse and computer with SolidWorks and Bambu Studio installed.</p>
               </div>
             </div>
 
@@ -63,37 +63,36 @@ function Solidworks() {
                 <article className="topic-card">
                   <span>01</span>
 
-                  <h3>Part Modeling</h3>
+                  <h3>Sketching</h3>
 
                   <p>
-                    Introduction to sketching, extrusion, revolution and other
-                    fundamental feature creation tools.
+                    Master the foundation of parametric design. Learn to create sketches using geometric relations, smart dimensions, and constraints to achieve a fully defined state and capture design intent.
                   </p>
 
-                  <p>
-                    Understanding design intent, constraints and parametric
-                    modeling concepts.
-                  </p>
+
                 </article>
 
                 <article className="topic-card">
                   <span>02</span>
 
-                  <h3>Assembly Design</h3>
+                  <h3>Features</h3>
 
                   <p>
-                    Learning how to create assemblies, apply mates and
-                    validate mechanical interactions between components.
+                    Transform sketches into 3D parts using core features like Extrude Boss/Base and Extrude Cut.
+                  </p>
+
+                  <p>
+                    Learn how to prepare your models for slicing and execute 3D printing using on-campus facilities.
                   </p>
                 </article>
 
                 <article className="topic-card">
                   <span>03</span>
 
-                  <h3>Hands-on Modeling</h3>
+                  <h3>Assembly Design</h3>
 
                   <p>
-                    Live instructor-led modeling from scratch. Create parts, assemblies, and drawings together in SolidWorks - no prior experience needed.
+                    Bring components together using standard, advanced, and mechanical mates. Validate mechanical interactions, run interference checks, and create exploded views.
                   </p>
                 </article>
               </div>
