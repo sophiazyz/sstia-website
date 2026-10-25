@@ -107,7 +107,7 @@ function Solidworks() {
 
               <div className="materials-list">
                 <a
-                  href="#"
+                  href="https://sjtu.feishu.cn/minutes/obcntpjcph28k2k88364917x?from=from_copylink#"
                   className="material-link"
                   target="_blank"
                   rel="noopener noreferrer"
